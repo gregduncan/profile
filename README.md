@@ -1,4 +1,4 @@
-Greg Duncan CO UK
+GregDuncan.CO.UK
 ============
 
 Profile website @ gregduncan.co.uk
