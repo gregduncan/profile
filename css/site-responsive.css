@@ -1,0 +1,58 @@
+﻿@media only screen and (max-width : 1180px)
+{
+    .master-head:after
+    {
+        display:none;
+    }
+}
+
+@media only screen and (max-width : 660px)
+{
+    .container
+    {
+        padding:0;
+    }
+
+    .master-head:before
+    {
+        display:none;
+    }
+
+    .master-head
+    {
+        background:none;
+    }
+
+    .master-head > a
+    {
+        display:block;
+    }
+
+    .sidebar
+    {
+        right:0;
+    }
+}
+
+@media only screen and (max-width : 500px) {
+  
+
+    .navbar .nav > li > a
+    {
+        font-size:14px;
+        padding:8px;
+
+    }
+
+    .master-head > a
+    {
+        width:244px;
+        height:100px;
+        background-image: url(images/logo-small.png);
+    }
+
+    .master-head > a:after
+    {
+        top:110px;
+    }
+}

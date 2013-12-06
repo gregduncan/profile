@@ -1,0 +1,403 @@
+﻿@bodyimage: url(../images/bg.png);
+@brown: #5F5050;
+@white: #fff;
+@grey: #333;
+@heading-font: 'Archivo Black', sans-serif;
+@standard-font: 'Open Sans', sans-serif;
+
+a, abbr, acronym, address, applet, article, aside, audio, b, blockquote, big, body, center, canvas, caption, cite, code, command, datalist, dd, del, details, dfn, dl, div, dt, em, embed, fieldset, figcaption, figure, font, footer, form, h1, h2, h3, h4, h5, h6, header, hgroup, html, i, iframe, img, ins, kbd, keygen, label, legend, li, meter, nav, object, ol, output, p, pre, progress, q, s, samp, section, small, span, source, strike, strong, sub, sup, table, tbody, tfoot, thead, th, tr, td, video, tt, u, ul, var
+{
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    border: 0 none;
+    background: transparent;
+    vertical-align: top;
+    font-size: 100%;
+}
+
+ol, ul
+{
+    list-style: none;
+}
+
+blockquote, q
+{
+    quotes: none;
+}
+
+table, table td
+{
+    padding: 0;
+    border: none;
+    border-collapse: collapse;
+}
+
+img
+{
+    vertical-align: bottom;
+}
+
+a img
+{
+    border: none;
+}
+
+embed
+{
+    vertical-align: top;
+}
+
+a
+{
+    cursor: pointer;
+}
+
+body
+{
+    background: @bodyimage;
+    font-family: @standard-font;
+}
+
+.overflow
+{
+    overflow: hidden;
+}
+
+.pull-left
+{
+    float: left;
+}
+
+.pull-right
+{
+    float: right;
+}
+
+.btn
+{
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    display: inline-block;
+    margin-bottom: 0;
+    padding: 4px 12px;
+    border-width: 1px;
+    border-style: solid;
+    border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) #A2A2A2;
+    border-radius: 4px 4px 4px 4px;
+    -moz-border-image: none;
+    -o-border-image: none;
+    -webkit-border-image: none;
+    border-image: none;
+    background-color: #F5F5F5;
+    background-image: linear-gradient(to bottom, #FFFFFF, #E6E6E6);
+    background-repeat: repeat-x;
+    -webkit-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.2) inset, 0 1px 2px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 1px 0 rgba(255, 255, 255, 0.2) inset, 0 1px 2px rgba(0, 0, 0, 0.05);
+    color: @brown;
+    vertical-align: middle;
+    text-align: center;
+    text-transform: capitalize;
+    -webkit-text-shadow: 0 1px 1px rgba(255, 255, 255, 0.75);
+    text-shadow: 0 1px 1px rgba(255, 255, 255, 0.75);
+    font-size: 13px;
+    line-height: 20px;
+    cursor: pointer;
+}
+
+.btn:hover
+{
+    background-color: #e6e6e6;
+    *background-color: #d9d9d9;
+    background-image: none;
+}
+
+.container
+{
+    padding: 0;
+    max-width: 1175px;
+    margin:0 auto;
+}
+
+.navbar
+{
+    position: absolute;
+    top: 0;
+    text-transform: uppercase;
+    font-family: @heading-font;
+}
+
+.navbar .nav > li
+{
+    float: left;
+}
+
+.navbar .nav > li > a
+{
+    display: block;
+    padding: 10px 20px;
+    color: @brown;
+    font-size: 18px;
+}
+
+.navbar .nav > li > a.active
+{
+    background: @brown;
+    color: @white;
+    -webkit-text-shadow: none;
+    text-shadow: none;
+}
+
+.navbar .nav > li > a:hover
+{
+    background: @brown;
+    color: @white;
+    -webkit-text-shadow: none;
+    text-shadow: none;
+}
+
+.content
+{
+    padding-right: 0;
+    padding-left: 0;
+}
+
+.masthead
+{
+    margin-left: 60px;
+    height: 295px;
+    background: url(../images/header.png) repeat-x bottom;
+}
+
+
+.masthead:before
+{
+    position: relative;
+    left: -60px;
+    display: inline-block;
+    float: left;
+    width: 60px;
+    height: 295px;
+    background: url(../images/header-left.png) no-repeat bottom;
+    content: "";
+}
+
+.masthead:after
+{
+    display: inline-block;
+    float: right;
+    width: 600px;
+    height: 295px;
+    background: url(../images/header-right-new.png) no-repeat bottom;
+    content: "";
+}
+
+.masthead > a
+{
+    position: relative;
+    top: 68px;
+    right: 40px;
+    display: inline-block;
+    width: 340px;
+    height: 140px;
+    background: url(../images/logo.png) no-repeat;
+}
+
+.masthead > a:after
+{
+    position: relative;
+    top: 150px;
+    display: inline-block;
+    color: @brown;
+    content: "u.i developer / programmer";
+    text-transform: uppercase;
+    font-size: 18px;
+    font-family: @heading-font;
+}
+
+.content-inner
+{
+    min-height: 700px;
+    padding-bottom:50px;
+}
+
+.row
+{
+}
+
+.row h3
+{
+    margin-bottom: 10px;
+    color: @brown;
+    text-transform: uppercase;
+    font-size: 22px;
+    font-family: @heading-font;
+}
+
+.project
+{
+    float: left;
+    margin: 0 20px 50px 0;
+    width: 520px;
+    color: @brown;
+}
+
+.project a
+{
+    color: @brown;
+}
+
+.project p
+{
+    color: #333;
+}
+
+.project-image
+{
+    float: left;
+    margin-right: 20px;
+    width: 140px;
+    height: 130px;
+    background: url(http://www.gregduncan.co.uk/App_Themes/Default/Images/Project/Photos/25.png) no-repeat;
+    -webkit-box-shadow: 1px 2px 7px #333;
+    box-shadow: 1px 2px 7px #333;
+}
+
+.project-description
+{
+    float: left;
+    width: 350px;
+}
+
+.skills
+{
+    min-height: 300px;
+    margin: 0 20px 50px 0;
+    padding: 20px;
+    background: url(../images/leather.png);
+}
+
+.skills > ul
+{
+    float: left;
+    margin: 0 60px 20px 0;
+    font: 14px;
+}
+
+.skills > ul > li.heading
+{
+    font-weight: bold;
+}
+
+.gdcd 
+{
+    min-height:200px;
+}
+
+.gdcd > ul > li
+{
+    float:left;
+    margin-right:10px;
+}
+
+.gdcd > ul > li > a
+{
+    text-decoration:underline;
+    color:@grey;
+}
+
+.about > p
+{
+    padding-bottom:10px;
+}
+
+.sidebar
+{
+    width:300px;
+    padding: 40px 30px 0 30px;
+    min-height: 240px;
+    background: url(../images/rhs.png) no-repeat;
+    float: right;
+    margin-right: 15px;
+}
+
+.sidebar:after
+{
+    position: relative;
+    right: 30px;
+    display: block;
+    width: 300px;
+    height: 40px;
+    background: url(../images/rhs-bottom.png) no-repeat bottom;
+    content: "";
+}
+
+.sidebar h2
+{
+    color: @white;
+    font-size: 18px;
+    line-height: 25px;
+}
+
+.sidebar h3
+{
+    margin: 40px 0 10px 0;
+    color: @white;
+    text-transform: uppercase;
+    font-size: 18px;
+    font-family: @heading-font;
+    line-height: 25px;
+}
+
+.sidebar ul > li
+{
+    margin-bottom: 15px;
+}
+
+.sidebar input[type="text"]
+{
+    padding: 8px 0;
+    width: 230px;
+    border: 3px solid @brown;
+    border-radius: 3px;
+    color: @brown;
+    text-indent: 5px;
+    font-family: @standard-font;
+}
+
+.sidebar textarea
+{
+    padding: 8px 0;
+    width: 230px;
+    height: 120px;
+    border: 3px solid @brown;
+    border-radius: 3px;
+    color: @brown;
+    text-indent: 5px;
+    font-size: 13px;
+    font-family: @standard-font;
+}
+
+.sidebar .recommends
+{
+    width: 224px;
+    height: 180px;
+    border: 3px solid @brown;
+    background: url(../images/recommends.png) no-repeat bottom;
+}
+
+.sidebar .recommends > a
+{
+    display: block;
+    width: 224px;
+    height: 180px;
+}
+
+.sidebar .recommends > a:hover
+{
+    background: #000;
+    opacity: 0.3;
+}
+
