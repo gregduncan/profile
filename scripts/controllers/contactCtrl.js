@@ -1,7 +1,7 @@
 ﻿/// <reference path="../libs/angular.js" />
 'use strict';
 
-revivedControllers.controller('ContactCtrl', ['$scope', '$http', function ContactCtrl($scope, $http) {
+gdControllers.controller('ContactCtrl', ['$scope', '$http', function ContactCtrl($scope, $http) {
 
     var contact = $scope.contact = {
         name: "",
@@ -13,20 +13,20 @@ revivedControllers.controller('ContactCtrl', ['$scope', '$http', function Contac
 
     var email = {
         "key": "xjBp-aqzNERZj5OxRZB6vw",
-        "template_name": "revived-contact",
+        "template_name": "gd-contact",
         "message": {
             "subject": "Website request",
-            "from_email": "webmaster@reviveddrives.com",
-            "from_name": "Revived Drives",
+            "from_email": "mail@gregduncan.co.uk",
+            "from_name": "Greg Duncan",
             "to": [
                 {
-                    "email": "reviveddrives@gmail.com",
-                    "name": "Chris Turp",
+                    "email": "mail@gregduncan.co.uk",
+                    "name": "Greg Duncan",
                     "type": "to"
                 }
             ],
             "headers": {
-                "Reply-To": "info@reviveddrives.com"
+                "Reply-To": "mail@gregduncan.co.uk"
             },
             "important": false,
             "track_opens": false,

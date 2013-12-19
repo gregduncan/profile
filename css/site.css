@@ -1,4 +1,21 @@
-﻿a,
+﻿/*
+
+        Created on : 2013-12-18
+        Author : Greg Duncan
+        Description: Stylesheet for front-end website.
+
+        0. Less
+        1. Resets
+        2. Globals
+        3. Header Nav
+        4. Masthead
+        5. Sidebar
+        6. Content
+
+**/
+/* 0. Less */
+/* 1. Resets */
+a,
 abbr,
 acronym,
 address,
@@ -123,6 +140,15 @@ a {
     cursor: pointer;
 }
 
+/* 2. Globals */
+h1,
+h2,
+h3,
+h4 {
+    font-family: 'Archivo Black', sans-serif;
+    color: #5f5050;
+}
+
 body {
     background: url(../images/bg.png);
     font-family: 'Open Sans', sans-serif;
@@ -132,58 +158,73 @@ body {
     overflow: hidden;
 }
 
-.pull-left {
-    float: left;
-}
-
-.pull-right {
-    float: right;
-}
-
-.btn {
-    -moz-border-bottom-colors: none;
-    -moz-border-left-colors: none;
-    -moz-border-right-colors: none;
-    -moz-border-top-colors: none;
-    display: inline-block;
-    margin-bottom: 0;
-    padding: 4px 12px;
-    border-width: 1px;
-    border-style: solid;
-    border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) #a2a2a2;
-    border-radius: 4px 4px 4px 4px;
-    -moz-border-image: none;
-    -o-border-image: none;
-    -webkit-border-image: none;
-    border-image: none;
-    background-color: #F5F5F5;
-    background-image: linear-gradient(to bottom, #ffffff, #e6e6e6);
-    background-repeat: repeat-x;
-    -webkit-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.2) inset, 0 1px 2px rgba(0, 0, 0, 0.05);
-    box-shadow: 0 1px 0 rgba(255, 255, 255, 0.2) inset, 0 1px 2px rgba(0, 0, 0, 0.05);
-    color: #5f5050;
-    vertical-align: middle;
-    text-align: center;
-    text-transform: capitalize;
-    -webkit-text-shadow: 0 1px 1px rgba(255, 255, 255, 0.75);
-    text-shadow: 0 1px 1px rgba(255, 255, 255, 0.75);
-    font-size: 13px;
-    line-height: 20px;
-    cursor: pointer;
-}
-
-.btn:hover {
-    background-color: #e6e6e6;
-    *background-color: #d9d9d9;
-    background-image: none;
-}
-
 .container {
     padding: 0;
     max-width: 1175px;
     margin: 0 auto;
 }
 
+.margin-bottom-5 {
+    margin-bottom: 5px;
+}
+
+.margin-bottom-10 {
+    margin-bottom: 10px;
+}
+
+.margin-bottom-15 {
+    margin-bottom: 15px;
+}
+
+.margin-bottom-20 {
+    margin-bottom: 20px;
+}
+
+.margin-bottom-30 {
+    margin-bottom: 30px;
+}
+
+.margin-top-5 {
+    margin-top: 5px;
+}
+
+.margin-top-10 {
+    margin-top: 10px;
+}
+
+.margin-top-15 {
+    margin-top: 15px;
+}
+
+.margin-top-20 {
+    margin-top: 20px;
+}
+
+.margin-top-30 {
+    margin-top: 30px;
+}
+
+.padding-bottom-5 {
+    padding-bottom: 5px;
+}
+
+.padding-bottom-10 {
+    padding-bottom: 10px;
+}
+
+.padding-bottom-15 {
+    padding-bottom: 15px;
+}
+
+.padding-bottom-20 {
+    padding-bottom: 20px;
+}
+
+.padding-bottom-30 {
+    padding-bottom: 30px;
+}
+
+/* 3. Header Nav */
 .navbar {
     position: absolute;
     top: 0;
@@ -221,6 +262,7 @@ body {
     padding-left: 0;
 }
 
+/* 4. Masthead */
 .masthead {
     margin-left: 60px;
     height: 295px;
@@ -243,7 +285,7 @@ body {
     float: right;
     width: 600px;
     height: 295px;
-    background: url(../images/header-right-new.png) no-repeat bottom;
+    background: url(../images/header-right-new-new.png) no-repeat bottom;
     content: "";
 }
 
@@ -268,91 +310,13 @@ body {
     font-family: 'Archivo Black', sans-serif;
 }
 
-.content-inner {
-    min-height: 700px;
-    padding-bottom: 50px;
-}
-
-.row h3 {
-    margin-bottom: 10px;
-    color: #5f5050;
-    text-transform: uppercase;
-    font-size: 22px;
-    font-family: 'Archivo Black', sans-serif;
-}
-
-.project {
-    float: left;
-    margin: 0 20px 50px 0;
-    width: 520px;
-    color: #5f5050;
-}
-
-.project a {
-    color: #5f5050;
-}
-
-.project p {
-    color: #333;
-}
-
-.project-image {
-    float: left;
-    margin-right: 20px;
-    width: 140px;
-    height: 130px;
-    background: url(http://www.gregduncan.co.uk/App_Themes/Default/Images/Project/Photos/25.png) no-repeat;
-    -webkit-box-shadow: 1px 2px 7px #333;
-    box-shadow: 1px 2px 7px #333;
-}
-
-.project-description {
-    float: left;
-    width: 350px;
-}
-
-.skills {
-    min-height: 300px;
-    margin: 0 20px 50px 0;
-    padding: 20px;
-    background: url(../images/leather.png);
-}
-
-.skills > ul {
-    float: left;
-    margin: 0 60px 20px 0;
-    font: 14px;
-}
-
-.skills > ul > li.heading {
-    font-weight: bold;
-}
-
-.gdcd {
-    min-height: 200px;
-}
-
-.gdcd > ul > li {
-    float: left;
-    margin-right: 10px;
-}
-
-.gdcd > ul > li > a {
-    text-decoration: underline;
-    color: #333333;
-}
-
-.about > p {
-    padding-bottom: 10px;
-}
-
+/* 5. Sidebar */
 .sidebar {
     width: 300px;
     padding: 40px 30px 0 30px;
     min-height: 240px;
     background: url(../images/rhs.png) no-repeat;
     float: right;
-    margin-right: 15px;
 }
 
 .sidebar:after {
@@ -422,4 +386,164 @@ body {
 .sidebar .recommends > a:hover {
     background: #000;
     opacity: 0.3;
+}
+
+/* 6. Content */
+.content-inner {
+    min-height: 700px;
+    padding-bottom: 50px;
+}
+
+.page {
+    padding-top: 20px;
+}
+
+.page h2 {
+    font-size: 30px;
+}
+
+/* 7. Projects */
+.project {
+    color: #5f5050;
+    font-family: Georgia;
+    margin-bottom: 60px;
+}
+
+.project a {
+    color: #5f5050;
+}
+
+.project p {
+    color: #333;
+    font-size: 14px;
+    margin-bottom: 5px;
+}
+
+.project h3 {
+    margin-bottom: 5px;
+    color: #5f5050;
+    font-size: 16px;
+    font-family: Georgia;
+    font-style: italic;
+    font-weight: bold;
+}
+
+.project-image {
+    float: left;
+    margin: 0 15px 0 5px;
+    width: 147px;
+    height: 130px;
+    background-image: url(/images/projects/sprite.png);
+    -webkit-box-shadow: 1px 2px 7px #333;
+    box-shadow: 1px 2px 7px #333;
+}
+
+.project-managemmychain {
+    background-position: 0 -130px;
+}
+
+.project-portchesterbiz {
+    background-position: 0 -260px;
+}
+
+.project-partybelles {
+    background-position: 0 -390px;
+}
+
+.project-moneybox {
+    background-position: 0 -520px;
+}
+
+.project-ethnicraft {
+    background-position: 0 -650px;
+}
+
+.project-aqua {
+    background-position: 0 -780px;
+}
+
+.project-easyoffice {
+    background-position: 0 -910px;
+}
+
+.project-grc {
+    background-position: 0 -1050px;
+}
+
+.project-segmantics {
+    background-position: 0 -1170px;
+}
+
+.project-description {
+    float: left;
+    width: 350px;
+}
+
+a.read {
+    background: #EFEDE4;
+    border-radius: 3px;
+    display: table;
+    font-size: 12px;
+    padding: 2px 10px;
+    text-transform: capitalize;
+    color: #5f5050;
+    font-family: Georgia;
+}
+
+a.read:hover {
+    background: #CBC9C1;
+    text-decoration: none;
+}
+
+.middle {
+    height: 300px;
+    background: url(/images/home-middle.png) repeat-x top;
+    margin: 0 5px;
+    padding: 15px;
+}
+
+.middle:after {
+    position: relative;
+    left: 100%;
+    top: -270px;
+    display: block;
+    width: 27px;
+    height: 328px;
+    background-image: url(/images/home-middle-tape.png);
+    content: "";
+}
+
+.gdcd:before {
+    position: relative;
+    right: 25px;
+    top: -75px;
+    display: block;
+    width: 27px;
+    height: 328px;
+    background-image: url(/images/home-middle-tape.png);
+    content: "";
+}
+
+.middle .gdcd {
+    width: 468px;
+    height: 198px;
+    background: #ffffff url(/images/gdcd.png) no-repeat center center;
+}
+
+.middle .tech {
+    width: 300px;
+    height: 198px;
+    background: #ffffff;
+    padding: 15px;
+    color: #444348;
+    font-family: Georgia;
+    font-size: 20px;
+}
+
+.middle .tech .row {
+    padding: 3px 0;
+}
+
+.middle .tech span {
+    color: #999999;
 }
