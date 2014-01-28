@@ -17,8 +17,10 @@
 /* 0. Less */
 @bodyimage: url(../images/bg.png);
 @brown: #5F5050;
+@light-brown:#776D6D;
 @white: #fff;
 @grey: #333;
+@light-grey: #999;
 @heading-font: 'Archivo Black', sans-serif;
 @standard-font: 'Open Sans', sans-serif;
 @georgia-font: Georgia;
@@ -161,6 +163,20 @@ body {
     padding-bottom:30px;
 }
 
+.btn-default
+{
+    background-color: @brown;
+    border-color:@brown;
+    color: @white;
+}
+
+.btn-default:hover
+{
+    background-color:@light-brown;
+    border-color:@light-brown;
+    color: @white;
+}
+
 /* 3. Header Nav */
 .navbar {
     position: absolute;
@@ -293,6 +309,7 @@ body {
     color: @brown;
     text-indent: 5px;
     font-family: @standard-font;
+    font-size:13px;
 }
 
 .sidebar textarea {
@@ -359,6 +376,27 @@ body {
     margin-bottom:5px;
 }
 
+.project.full p {
+    font-size:12px;
+    font-family:@standard-font;
+    line-height:18px;
+}
+
+.project.full .external
+{
+    color: @brown;
+    font-size: 14px;
+    font-family: @georgia-font;
+    font-style:italic;
+    font-weight:bold;
+    text-decoration:underline;
+}
+
+.project.full .external:hover
+{
+    text-decoration:none;
+}
+
 .project h3 {
     margin-bottom: 5px;
     color: @brown;
@@ -423,6 +461,11 @@ body {
     background-position:0 -1170px;
 }
 
+.project-instant
+{
+    background-position:0 -1300px;
+}
+
 .project-description {
     float: left;
     width: 350px;
@@ -444,7 +487,7 @@ a.read:hover {
     text-decoration:none;
 }
 
-.middle
+.paper
 {
     height:300px;
     background: url(/images/home-middle.png) repeat-x top;
@@ -452,7 +495,7 @@ a.read:hover {
     padding:15px;
 }
 
-.middle:after {
+.paper:after {
     position: relative;
     left:100%;
     top: -270px;
@@ -475,14 +518,14 @@ a.read:hover {
     content: "";
 }
 
-.middle .gdcd
+.paper .gdcd
 {
     width:468px;
     height:198px;
     background: #ffffff url(/images/gdcd.png) no-repeat center center;
 }
 
-.middle .tech
+.paper .tech
 {
     width:300px;
     height:198px;
@@ -493,12 +536,35 @@ a.read:hover {
     font-size: 20px;
 }
 
-.middle .tech .row
+.paper .tech .row
 {
     padding:3px 0;
 }
 
-.middle .tech span
+.paper .tech span
 {
     color:#999999;
+}
+
+.skills
+{
+
+}
+
+.skills h4
+{
+    color: @grey;
+    font-family:  @georgia-font;
+    font-size: 16px;
+    font-style: italic;
+    padding-bottom: 5px;
+    font-weight:bold;
+}
+
+.skills ul
+{
+    color: @brown;
+    font-family: @georgia-font;
+    font-size: 13px;
+    margin-bottom:15px;
 }
