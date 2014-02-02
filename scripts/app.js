@@ -1,21 +1,25 @@
 ﻿/// <reference path="angular.js" />
 'use strict';
 
+var gdControllers = angular.module('gdControllers', []);
+
 var gdApp = angular.module('gdApp', [
-    'ngRoute'
+    'ngRoute',
+    'gdControllers'
 ]);
 
 gdApp.config(['$routeProvider',
   function ($routeProvider) {
       $routeProvider.
-        when('/work', {
-            templateUrl: 'partials/work.html'
+        when('/projects', {
+            templateUrl: 'partials/projects.html'
         }).
         when('/skills', {
             templateUrl: 'partials/skills.html'
         }).
-        when('/gdcd', {
-            templateUrl: 'partials/gdcd.html'
+        when('/gdcd/:year', {
+            templateUrl: 'partials/gdcd.html',
+            controller: 'TrackCtrl'
         }).
         when('/', {
             templateUrl: 'partials/home.html'

@@ -21,10 +21,15 @@
 @white: #fff;
 @grey: #333;
 @light-grey: #999;
+@orange:#FFA500;
 @heading-font: 'Archivo Black', sans-serif;
 @standard-font: 'Open Sans', sans-serif;
 @georgia-font: Georgia;
-
+.default-para(){
+    font-size:14px;
+    margin-bottom:15px;
+    font-family:@georgia-font;
+}
 
 /* 1. Resets */
 a, abbr, acronym, address, applet, article, aside, audio, b, blockquote, big, body, center, canvas, caption, cite, code, command, datalist, dd, del, details, dfn, dl, div, dt, em, embed, fieldset, figcaption, figure, font, footer, form, h1, h2, h3, h4, h5, h6, header, hgroup, html, i, iframe, img, ins, kbd, keygen, label, legend, li, meter, nav, object, ol, output, p, pre, progress, q, s, samp, section, small, span, source, strike, strong, sub, sup, table, tbody, tfoot, thead, th, tr, td, video, tt, u, ul, var {
@@ -65,6 +70,11 @@ embed {
 
 a {
     cursor: pointer;
+}
+
+iframe
+{
+    border:1px solid @brown;
 }
 
 /* 2. Globals */
@@ -326,7 +336,7 @@ body {
 
 .sidebar .recommends {
     width: 224px;
-    height: 180px;
+    height: 224px;
     border: 3px solid @brown;
     background: url(../images/recommends.png) no-repeat bottom;
 }
@@ -491,7 +501,7 @@ a.read:hover {
 {
     height:300px;
     background: url(/images/home-middle.png) repeat-x top;
-    margin:0 5px;
+    margin:0 5px 50px 5px;
     padding:15px;
 }
 
@@ -567,4 +577,85 @@ a.read:hover {
     font-family: @georgia-font;
     font-size: 13px;
     margin-bottom:15px;
+}
+
+.about p
+{
+    .default-para
+}
+
+.cd-listing p
+{
+    .default-para
+}
+
+.cd-listing ul
+{
+    overflow:hidden;
+    font-size:16px;
+    color:@brown;
+    font-style:italic;
+    font-weight:bold;
+    font-family:@georgia-font;
+    margin-bottom:30px;
+}
+
+.cd-listing ul li
+{
+    float:left;
+    margin-right:15px;
+}
+
+.cd-listing ul li a
+{
+    color:@brown;
+    text-decoration:underline;
+}
+
+.cd-listing ul li a.active
+{
+    color:@orange;
+}
+
+.cd-listing ul li a:hover 
+{
+    text-decoration:none;
+}
+
+.track
+{
+    overflow:hidden;
+    font-family:@georgia-font;
+    margin-bottom:30px;
+}
+
+.track > img
+{
+    float:left;
+    margin-right:10px;
+}
+
+.track > h3
+{
+    font-family:@georgia-font;
+    font-size:14px;
+    font-style:italic;
+    font-weight:bold;
+    text-transform:capitalize;
+    margin-bottom:10px;
+}
+
+.track > h4
+{
+    font-family:@georgia-font;
+    font-size:12px;
+    font-weight:bold;
+    text-transform:capitalize;
+    margin-bottom:5px;
+}
+
+.track > p
+{
+    font-family:@georgia-font;
+    font-size:12px;
 }

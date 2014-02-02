@@ -132,6 +132,9 @@ embed {
 a {
   cursor: pointer;
 }
+iframe {
+  border: 1px solid #5f5050;
+}
 /* 2. Globals */
 h1,
 h2,
@@ -338,7 +341,7 @@ body {
 }
 .sidebar .recommends {
   width: 224px;
-  height: 180px;
+  height: 224px;
   border: 3px solid #5f5050;
   background: url(../images/recommends.png) no-repeat bottom;
 }
@@ -460,7 +463,7 @@ a.read:hover {
 .paper {
   height: 300px;
   background: url(/images/home-middle.png) repeat-x top;
-  margin: 0 5px;
+  margin: 0 5px 50px 5px;
   padding: 15px;
 }
 .paper:after {
@@ -516,4 +519,65 @@ a.read:hover {
   font-family: Georgia;
   font-size: 13px;
   margin-bottom: 15px;
+}
+.about p {
+  font-size: 14px;
+  margin-bottom: 15px;
+  font-family: Georgia;
+}
+.cd-listing p {
+  font-size: 14px;
+  margin-bottom: 15px;
+  font-family: Georgia;
+}
+.cd-listing ul {
+  overflow: hidden;
+  font-size: 16px;
+  color: #5f5050;
+  font-style: italic;
+  font-weight: bold;
+  font-family: Georgia;
+  margin-bottom: 30px;
+}
+.cd-listing ul li {
+  float: left;
+  margin-right: 15px;
+}
+.cd-listing ul li a {
+  color: #5f5050;
+  text-decoration: underline;
+}
+.cd-listing ul li a.active {
+  color: #ffa500;
+}
+.cd-listing ul li a:hover {
+  text-decoration: none;
+}
+.track {
+  overflow: hidden;
+  font-family: Georgia;
+  margin-bottom: 30px;
+}
+.track > img {
+  float: left;
+  margin-right: 10px;
+}
+.track > h3 {
+  font-family: Georgia;
+  font-size: 14px;
+  font-style: italic;
+  font-weight: bold;
+  text-transform: capitalize;
+  margin-bottom: 10px;
+}
+.track > h4 {
+  font-family: Georgia;
+  font-size: 12px;
+  font-weight: bold;
+  text-transform: capitalize;
+  margin-bottom: 5px;
+}
+.track > p {
+  font-family: Georgia;
+  font-size: 12px;
 }

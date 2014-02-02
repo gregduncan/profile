@@ -6,7 +6,12 @@ gdApp.directive('navMenu', function ($location) {
             element.find('a').removeClass("active");
             var link = $location.path().replace("/", "");
             if (link) {
-                $("#" + link).addClass("active");
+                if (link.indexOf("gdcd") != -1)
+                {
+                    $("#gdcd").addClass("active");
+                } else {
+                    $("#" + link).addClass("active");
+                }                
             } else {
                 $("#home").addClass("active");
             }
