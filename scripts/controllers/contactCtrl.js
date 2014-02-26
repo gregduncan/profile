@@ -61,10 +61,6 @@ gdControllers.controller('ContactCtrl', ['$scope', '$http', function ContactCtrl
                 "content": contact.email
             },
             {
-                "name": "telephone",
-                "content": contact.telephone
-            },
-            {
                 "name": "message",
                 "content": contact.message
             }

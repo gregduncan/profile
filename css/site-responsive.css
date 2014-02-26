@@ -1,58 +1,56 @@
-﻿@media only screen and (max-width : 1180px)
-{
-    .master-head:after
-    {
-        display:none;
-    }
-}
-
-@media only screen and (max-width : 660px)
-{
-    .container
-    {
-        padding:0;
-    }
-
-    .master-head:before
-    {
+﻿@media only screen and (max-width : 1070px) {
+    .paper, 
+    .sidebar,
+    .row-top{
         display:none;
     }
 
-    .master-head
-    {
-        background:none;
+    .container{
+        padding:10px;
     }
 
-    .master-head > a
+    .navbar{
+        position:relative;
+        margin-bottom:5px;
+    } 
+
+    .navbar .nav > li 
     {
-        display:block;
+        margin:0 3px;
+        float:none;
     }
 
-    .sidebar
-    {
-        right:0;
-    }
-}
-
-@media only screen and (max-width : 500px) {
-  
-
-    .navbar .nav > li > a
-    {
+    .navbar .nav > li > a{
+        padding:5px;
         font-size:14px;
-        padding:8px;
-
+    }
+    
+    .masthead:before {
+        display:none;
     }
 
-    .master-head > a
-    {
-        width:244px;
-        height:100px;
-        background-image: url(images/logo-small.png);
+    .masthead:after {
+       display:none;
     }
 
-    .master-head > a:after
-    {
-        top:110px;
+    .masthead {
+        margin-left: 0;
+        height: auto;
+        background:none;
+        margin-bottom:30px;
     }
+
+     .masthead > a {
+        position: relative;
+        top: 0;
+        right: 0;
+        display: inline-block;
+        width: 340px;
+        height: 140px;
+        background: url(../images/logo.png) no-repeat;
+    }
+
+    .row-bottom div:last-child{
+        display:none;
+    }    
 }

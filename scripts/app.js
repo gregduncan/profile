@@ -8,9 +8,9 @@ var gdApp = angular.module('gdApp', [
     'gdControllers'
 ]);
 
-gdApp.config(['$routeProvider',
-  function ($routeProvider) {
-      $routeProvider.
+gdApp.config(['$routeProvider', '$locationProvider', function ($routeProvider, $locationProvider) {
+
+    $routeProvider.
         when('/projects', {
             templateUrl: 'partials/projects.html'
         }).
@@ -18,7 +18,7 @@ gdApp.config(['$routeProvider',
             templateUrl: 'partials/skills.html'
         }).
         when('/gdcd/:year', {
-            templateUrl: 'partials/gdcd.html',
+            templateUrl: '../partials/gdcd.html',
             controller: 'TrackCtrl'
         }).
         when('/', {
@@ -27,4 +27,6 @@ gdApp.config(['$routeProvider',
         otherwise({
             redirectTo: '/'
         });
+
+    $locationProvider.html5Mode(true);
 }]);

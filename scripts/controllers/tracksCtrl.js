@@ -4,7 +4,7 @@
 gdControllers.controller('TrackCtrl', ['$scope', '$route', '$routeParams', function TrackCtrl($scope, $route, $routeParams) {
 
     // Set page variable for url.
-    var page = 'partials/cds/' + $routeParams.year + '.html'
+    var page = '../partials/cds/' + $routeParams.year + '.html'
 
     // Get page via ajax.
     $.get(page, function (data) {

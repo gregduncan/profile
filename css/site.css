@@ -1,8 +1,8 @@
 ﻿/*
 
-    Created on : 2013-12-18
+    Created on : 2014-04-26
     Author : Greg Duncan
-    Description: Stylesheet for front-end website.
+    Description: Stylesheet front-end web app.
 
     0. Less
     1. Resets
@@ -10,7 +10,9 @@
     3. Header Nav
     4. Masthead
     5. Sidebar
-    6. Content
+    6. Projects
+    7. GDCD
+    8. Skills
 
 **/
 /* 0. Less */
@@ -19,13 +21,11 @@ a,
 abbr,
 acronym,
 address,
-applet,
 article,
 aside,
 audio,
 b,
 blockquote,
-big,
 body,
 center,
 canvas,
@@ -46,7 +46,6 @@ embed,
 fieldset,
 figcaption,
 figure,
-font,
 footer,
 form,
 h1,
@@ -82,7 +81,6 @@ section,
 small,
 span,
 source,
-strike,
 strong,
 sub,
 sup,
@@ -94,14 +92,13 @@ th,
 tr,
 td,
 video,
-tt,
 u,
 ul,
 var {
   margin: 0;
   padding: 0;
   outline: 0;
-  border: 0 none;
+  border: none;
   background: transparent;
   vertical-align: top;
   font-size: 100%;
@@ -143,62 +140,17 @@ h4 {
   font-family: 'Archivo Black', sans-serif;
   color: #5f5050;
 }
-body {
-  background: url(../images/bg.png);
-  font-family: 'Open Sans', sans-serif;
-}
 .overflow {
   overflow: hidden;
-}
-.container {
-  padding: 0;
-  max-width: 1175px;
-  margin: 0 auto;
-}
-.margin-bottom-5 {
-  margin-bottom: 5px;
-}
-.margin-bottom-10 {
-  margin-bottom: 10px;
 }
 .margin-bottom-15 {
   margin-bottom: 15px;
 }
-.margin-bottom-20 {
-  margin-bottom: 20px;
-}
 .margin-bottom-30 {
   margin-bottom: 30px;
 }
-.margin-top-5 {
-  margin-top: 5px;
-}
 .margin-top-10 {
   margin-top: 10px;
-}
-.margin-top-15 {
-  margin-top: 15px;
-}
-.margin-top-20 {
-  margin-top: 20px;
-}
-.margin-top-30 {
-  margin-top: 30px;
-}
-.padding-bottom-5 {
-  padding-bottom: 5px;
-}
-.padding-bottom-10 {
-  padding-bottom: 10px;
-}
-.padding-bottom-15 {
-  padding-bottom: 15px;
-}
-.padding-bottom-20 {
-  padding-bottom: 20px;
-}
-.padding-bottom-30 {
-  padding-bottom: 30px;
 }
 .btn-default {
   background-color: #5f5050;
@@ -209,6 +161,34 @@ body {
   background-color: #776d6d;
   border-color: #776d6d;
   color: #ffffff;
+}
+.p-default {
+  font-size: 14px;
+  margin-bottom: 15px;
+  font-family: Georgia;
+}
+body {
+  background: url(../images/bg.png);
+  font-family: 'Open Sans', sans-serif;
+}
+.container {
+  padding: 0;
+  max-width: 1175px;
+  margin: 0 auto;
+}
+.content {
+  padding-right: 0;
+  padding-left: 0;
+}
+.content-inner {
+  min-height: 700px;
+  padding-bottom: 50px;
+}
+.page {
+  padding-top: 20px;
+}
+.page h2 {
+  font-size: 30px;
 }
 /* 3. Header Nav */
 .navbar {
@@ -237,10 +217,6 @@ body {
   color: #ffffff;
   -webkit-text-shadow: none;
   text-shadow: none;
-}
-.content {
-  padding-right: 0;
-  padding-left: 0;
 }
 /* 4. Masthead */
 .masthead {
@@ -292,6 +268,7 @@ body {
   min-height: 240px;
   background: url(../images/rhs.png) no-repeat;
   float: right;
+  margin-bottom: 50px;
 }
 .sidebar:after {
   position: relative;
@@ -315,27 +292,26 @@ body {
   font-family: 'Archivo Black', sans-serif;
   line-height: 25px;
 }
+.sidebar p {
+  color: #fff;
+}
 .sidebar ul > li {
   margin-bottom: 15px;
 }
 .sidebar input[type="text"] {
-  padding: 8px 0;
   width: 230px;
   border: 3px solid #5f5050;
   border-radius: 3px;
   color: #5f5050;
-  text-indent: 5px;
   font-family: 'Open Sans', sans-serif;
   font-size: 13px;
 }
 .sidebar textarea {
-  padding: 8px 0;
   width: 230px;
   height: 120px;
   border: 3px solid #5f5050;
   border-radius: 3px;
   color: #5f5050;
-  text-indent: 5px;
   font-size: 13px;
   font-family: 'Open Sans', sans-serif;
 }
@@ -354,18 +330,7 @@ body {
   background: #000;
   opacity: 0.3;
 }
-/* 6. Content */
-.content-inner {
-  min-height: 700px;
-  padding-bottom: 50px;
-}
-.page {
-  padding-top: 20px;
-}
-.page h2 {
-  font-size: 30px;
-}
-/* 7. Projects */
+/* 6. Projects */
 .project {
   color: #5f5050;
   font-family: Georgia;
@@ -476,6 +441,7 @@ a.read:hover {
   background-image: url(/images/home-middle-tape.png);
   content: "";
 }
+/* 7. GDCD */
 .gdcd:before {
   position: relative;
   right: 25px;
@@ -505,25 +471,6 @@ a.read:hover {
 }
 .paper .tech span {
   color: #999999;
-}
-.skills h4 {
-  color: #333333;
-  font-family: Georgia;
-  font-size: 16px;
-  font-style: italic;
-  padding-bottom: 5px;
-  font-weight: bold;
-}
-.skills ul {
-  color: #5f5050;
-  font-family: Georgia;
-  font-size: 13px;
-  margin-bottom: 15px;
-}
-.about p {
-  font-size: 14px;
-  margin-bottom: 15px;
-  font-family: Georgia;
 }
 .cd-listing p {
   font-size: 14px;
@@ -580,4 +527,19 @@ a.read:hover {
 .track > p {
   font-family: Georgia;
   font-size: 12px;
+}
+/* 8. Skills */
+.skills h4 {
+  color: #333333;
+  font-family: Georgia;
+  font-size: 16px;
+  font-style: italic;
+  padding-bottom: 5px;
+  font-weight: bold;
+}
+.skills ul {
+  color: #5f5050;
+  font-family: Georgia;
+  font-size: 13px;
+  margin-bottom: 15px;
 }
