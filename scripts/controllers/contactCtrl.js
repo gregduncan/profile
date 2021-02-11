@@ -66,9 +66,12 @@ gdControllers.controller('ContactCtrl', ['$scope', '$http', function ContactCtrl
             }
         ];
 
-        $http.post("https://mandrillapp.com/api/1.0/messages/send-template.json", email).success(function (data) {
-
-        });
+        try {
+            gtag('event', 'Website', {
+                event_category: 'Contact us',
+                event_label: JSON.stringify(email.template_content),
+            });
+        } catch (e) { }
     };
 
 }]);
