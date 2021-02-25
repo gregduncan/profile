@@ -77,9 +77,7 @@ export default function Home() {
                                     <div className="col-md-4">
                                         <span>Knockout</span>
                                     </div>
-                                    <div className="col-md-4">
-                                        Redux
-                                    </div>
+                                    <div className="col-md-4">Redux</div>
                                 </div>
                                 <div className="row">
                                     <div className="col-md-4">
