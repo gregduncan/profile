@@ -12,6 +12,7 @@ export default function GDCD() {
         <>
             <Head>
                 <title>Greg Duncan | U.I Developer | GDCD{id}</title>
+                <meta name="description" content={`U.I and software development specialist – View GDCD from GDCD${id}. Greg Duncan U.I Developer.`}></meta>
             </Head>
             <div className="page cd-listing">
                 <h2 className="margin-bottom-30">GDCD</h2>

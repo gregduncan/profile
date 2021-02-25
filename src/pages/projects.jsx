@@ -5,6 +5,7 @@ export default function Projects() {
         <>
             <Head>
                 <title>Greg Duncan | U.I Developer | Projects</title>
+                <meta name="description" content="U.I and software development specialist – View latest projects. Greg Duncan U.I Developer."></meta>
             </Head>
             <div className="page">
                 <h2 className="margin-bottom-30">Projects</h2>

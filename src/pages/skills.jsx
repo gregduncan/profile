@@ -5,6 +5,7 @@ export default function Skills() {
         <>
             <Head>
                 <title>Greg Duncan | U.I Developer | Skills</title>
+                <meta name="description" content="U.I and software development specialist – View BE and FE skills. Greg Duncan U.I Developer."></meta>
             </Head>
             <div className="page">
                 <h2 className="margin-bottom-30">Skills</h2>

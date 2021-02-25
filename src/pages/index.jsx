@@ -5,6 +5,7 @@ export default function Home() {
         <>
             <Head>
                 <title>Greg Duncan | Lead Frontend Developer</title>
+                <meta name="description" content="U.I and software development specialist – JavaScript, React, Typescript, GraphQL, SEO and more... Greg Duncan U.I Developer."></meta>
             </Head>
             <div className="page">
                 <div className="row row-top">
