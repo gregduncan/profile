@@ -212,6 +212,13 @@ body {
     -webkit-text-shadow: none;
     text-shadow: none;
 }
+.navbar .nav > li.active > a {
+    background: #5f5050;
+    color: #ffffff;
+    -webkit-text-shadow: none;
+    text-shadow: none;
+}
+
 .navbar .nav > li > a:hover {
     background: #5f5050;
     color: #ffffff;
@@ -494,7 +501,7 @@ a.read:hover {
     color: #5f5050;
     text-decoration: underline;
 }
-.cd-listing ul li a.active {
+.cd-listing ul li.active a {
     color: #ffa500;
 }
 .cd-listing ul li a:hover {

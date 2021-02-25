@@ -5,6 +5,16 @@ export default class AppDocument extends Document {
         return (
             <Html>
                 <Head>
+                    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-29473761-12"></script>
+                    <script
+                        dangerouslySetInnerHTML={{
+                            __html: `
+                                window.dataLayer = window.dataLayer || [];
+                                function gtag(){dataLayer.push(arguments);}
+                                gtag('js', new Date());
+                                gtag('config', 'UA-29473761-12')`,
+                        }}
+                    />
                     <meta name="description" content="U.I and software development specialist – JavaScript, Knockout, Angular, C#, HTML5, CSS3, SEO and more... Greg Duncan U.I Developer." />
                     <meta name="robots" content="noodp" />
                     <meta name="subject" content="Greg Duncan U.I Developer" />
@@ -30,6 +40,7 @@ export default class AppDocument extends Document {
                 <body>
                     <Main />
                     <NextScript />
+                    <script src="https://smtpjs.com/v3/smtp.js"></script>
                 </body>
             </Html>
         );

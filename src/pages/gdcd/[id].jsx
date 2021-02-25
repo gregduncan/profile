@@ -21,33 +21,31 @@ export default function GDCD() {
                 </p>
                 <ul className="listing">
                     <li>Please select year:</li>
-                    <li>
+                    <li className={id === '2013' ? 'active' : ''}>
                         <Link href="/gdcd/2013">2013</Link>
                     </li>
-                    <li>
+                    <li className={id === '2012' ? 'active' : ''}>
                         <Link href="/gdcd/2012">2012</Link>
                     </li>
-                    <li>
-                        <Link id="2011" href="/gdcd/2011">
-                            2011
-                        </Link>
+                    <li className={id === '2011' ? 'active' : ''}>
+                        <Link href="/gdcd/2011">2011</Link>
                     </li>
-                    <li>
+                    <li className={id === '2010' ? 'active' : ''}>
                         <Link href="/gdcd/2010">2010</Link>
                     </li>
-                    <li>
+                    <li className={id === '2009' ? 'active' : ''}>
                         <Link href="/gdcd/2009">2009</Link>
                     </li>
-                    <li>
+                    <li className={id === '2008' ? 'active' : ''}>
                         <Link href="/gdcd/2008">2008</Link>
                     </li>
-                    <li>
+                    <li className={id === '2007' ? 'active' : ''}>
                         <Link href="/gdcd/2007">2007</Link>
                     </li>
-                    <li>
+                    <li className={id === '2005' ? 'active' : ''}>
                         <Link href="/gdcd/2005">2005</Link>
                     </li>
-                    <li>
+                    <li className={id === '2004' ? 'active' : ''}>
                         <Link href="/gdcd/2004">2004</Link>
                     </li>
                 </ul>
