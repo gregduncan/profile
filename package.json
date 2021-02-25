@@ -1,25 +1,19 @@
 {
-  "name": "profile",
-  "version": "1.0.0",
-  "description": "GregDuncan.CO.UK ============",
-  "main": "index.js",
-  "scripts": {
-    "start": "node server.js"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/gregduncan/profile.git"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/gregduncan/profile/issues"
-  },
-  "homepage": "https://github.com/gregduncan/profile#readme",
-  "dependencies": {
-    "connect": "^3.7.0",
-    "open": "^7.4.2",
-    "serve-static": "^1.14.1"
-  }
+    "name": "profile",
+    "version": "0.1.0",
+    "private": true,
+    "scripts": {
+        "dev": "next dev",
+        "build": "next build",
+        "start": "next start",
+        "pretty": "npx prettier --write ."
+    },
+    "dependencies": {
+        "next": "10.0.7",
+        "react": "17.0.1",
+        "react-dom": "17.0.1"
+    },
+    "devDependencies": {
+        "prettier": "^2.2.1"
+    }
 }
