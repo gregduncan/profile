@@ -59,37 +59,37 @@ export default function Home() {
                             <h2 className="margin-bottom-15">Technologies</h2>
                             <div className="tech">
                                 <div className="row">
-                                    <div className="col-md-6">Knockout.js</div>
+                                    <div className="col-md-6">React</div>
                                     <div className="col-md-6">
-                                        <span>Angular.js</span>
+                                        <span>Type Scripts</span>
                                     </div>
                                 </div>
                                 <div className="row">
                                     <div className="col-md-2">C#</div>
                                     <div className="col-md-5">
-                                        <span>ASP.NET</span>
+                                        <span>Graph QL</span>
                                     </div>
-                                    <div className="col-md-5">PHP</div>
+                                    <div className="col-md-5">ES6</div>
                                 </div>
                                 <div className="row">
-                                    <div className="col-md-4">jQuery</div>
+                                    <div className="col-md-4">Node</div>
                                     <div className="col-md-8">
-                                        <span>HTML5 &amp; CSS3</span>
+                                        <span>Knockout</span>
                                     </div>
                                 </div>
                                 <div className="row">
                                     <div className="col-md-4">
-                                        <span>MSSQL</span>
+                                        <span>Redux</span>
                                     </div>
-                                    <div className="col-md-4">MySQL</div>
+                                    <div className="col-md-4">Svelte</div>
                                     <div className="col-md-4">
-                                        <span>LINQ</span>
+                                        <span>SCSS</span>
                                     </div>
                                 </div>
                                 <div className="row">
-                                    <div className="col-md-6">Mobile apps</div>
+                                    <div className="col-md-6">React Native</div>
                                     <div className="col-md-6">
-                                        <span>Node.js</span>
+                                        <span>Cypress</span>
                                     </div>
                                 </div>
                             </div>
