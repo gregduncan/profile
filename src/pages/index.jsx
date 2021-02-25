@@ -59,10 +59,11 @@ export default function Home() {
                             <h2 className="margin-bottom-15">Technologies</h2>
                             <div className="tech">
                                 <div className="row">
-                                    <div className="col-md-6">React</div>
+                                    <div className="col-md-3">React</div>
                                     <div className="col-md-6">
-                                        <span>Type Scripts</span>
+                                        <span>Type Script</span>
                                     </div>
+                                    <div className="col-md-3">Node</div>
                                 </div>
                                 <div className="row">
                                     <div className="col-md-2">C#</div>
@@ -72,18 +73,21 @@ export default function Home() {
                                     <div className="col-md-5">ES6</div>
                                 </div>
                                 <div className="row">
-                                    <div className="col-md-4">Node</div>
-                                    <div className="col-md-8">
+                                    <div className="col-md-4">Snowpack</div>
+                                    <div className="col-md-4">
                                         <span>Knockout</span>
+                                    </div>
+                                    <div className="col-md-4">
+                                        Redux
                                     </div>
                                 </div>
                                 <div className="row">
                                     <div className="col-md-4">
-                                        <span>Redux</span>
+                                        <span>Vue</span>
                                     </div>
                                     <div className="col-md-4">Svelte</div>
                                     <div className="col-md-4">
-                                        <span>SCSS</span>
+                                        <span>Angular</span>
                                     </div>
                                 </div>
                                 <div className="row">
