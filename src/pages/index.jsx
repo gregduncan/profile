@@ -61,7 +61,7 @@ export default function Home() {
                                 <div className="row">
                                     <div className="col-md-3">React</div>
                                     <div className="col-md-6">
-                                        <span>Type Script</span>
+                                        <span>Typescript</span>
                                     </div>
                                     <div className="col-md-3">Node</div>
                                 </div>
