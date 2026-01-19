@@ -8,32 +8,39 @@ describe('Skills page', () => {
         expect(screen.getByRole('heading', { name: 'Skills' })).toBeInTheDocument();
     });
 
-    it('renders client side skills category', () => {
+    it('renders frameworks category', () => {
         render(<Skills />);
-        expect(screen.getByRole('heading', { name: 'Client Side' })).toBeInTheDocument();
-        expect(screen.getByText('Knockout.js')).toBeInTheDocument();
-        expect(screen.getByText('Angular.js')).toBeInTheDocument();
-        expect(screen.getByText('jQuery')).toBeInTheDocument();
+        expect(screen.getByRole('heading', { name: 'Frameworks' })).toBeInTheDocument();
+        expect(screen.getByText('React 19')).toBeInTheDocument();
+        expect(screen.getByText('Next.js 15')).toBeInTheDocument();
+        expect(screen.getByText('Astro')).toBeInTheDocument();
     });
 
-    it('renders programming skills category', () => {
+    it('renders languages category', () => {
         render(<Skills />);
-        expect(screen.getByRole('heading', { name: 'Programming' })).toBeInTheDocument();
-        expect(screen.getByText('C#')).toBeInTheDocument();
-        expect(screen.getByText('PHP')).toBeInTheDocument();
+        expect(screen.getByRole('heading', { name: 'Languages' })).toBeInTheDocument();
+        expect(screen.getByText('TypeScript')).toBeInTheDocument();
+        expect(screen.getByText('Rust')).toBeInTheDocument();
     });
 
-    it('renders database skills category', () => {
+    it('renders testing category', () => {
         render(<Skills />);
-        expect(screen.getByRole('heading', { name: 'Database' })).toBeInTheDocument();
-        expect(screen.getByText('MSSQL')).toBeInTheDocument();
-        expect(screen.getByText('PostgreSQL')).toBeInTheDocument();
+        expect(screen.getByRole('heading', { name: 'Testing' })).toBeInTheDocument();
+        expect(screen.getByText('Vitest')).toBeInTheDocument();
+        expect(screen.getByText('Playwright')).toBeInTheDocument();
     });
 
-    it('renders Microsoft Technologies category', () => {
+    it('renders cloud and infrastructure category', () => {
         render(<Skills />);
-        expect(screen.getByRole('heading', { name: 'Microsoft Technologies' })).toBeInTheDocument();
-        expect(screen.getByText('.NET 5 Framework')).toBeInTheDocument();
-        expect(screen.getByText('Azure')).toBeInTheDocument();
+        expect(screen.getByRole('heading', { name: 'Cloud & Infrastructure' })).toBeInTheDocument();
+        expect(screen.getByText('Vercel')).toBeInTheDocument();
+        expect(screen.getByText('Docker')).toBeInTheDocument();
+    });
+
+    it('renders AI and tooling category', () => {
+        render(<Skills />);
+        expect(screen.getByRole('heading', { name: 'AI & Tooling' })).toBeInTheDocument();
+        expect(screen.getByText('Claude / Copilot')).toBeInTheDocument();
+        expect(screen.getByText('LLM Integration')).toBeInTheDocument();
     });
 });

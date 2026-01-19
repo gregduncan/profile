@@ -4,95 +4,120 @@ export default function Skills() {
     return (
         <>
             <Head>
-                <title>Greg Duncan | U.I Developer | Skills</title>
-                <meta name="description" content="U.I and software development specialist – View BE and FE skills. Greg Duncan U.I Developer."></meta>
+                <title>Greg Duncan | Lead Frontend Developer | Skills</title>
+                <meta name="description" content="Lead Frontend Developer – React, TypeScript, Next.js, and modern web technologies. Greg Duncan."></meta>
             </Head>
             <div className="page">
                 <h2 className="margin-bottom-30">Skills</h2>
                 <div className="row skills">
                     <div className="col-md-4">
-                        <h4>Client Side</h4>
+                        <h4>Frameworks</h4>
                         <ul>
-                            <li>Knockout.js</li>
-                            <li>Angular.js</li>
-                            <li>Ember.js</li>
-                            <li>Require.js</li>
-                            <li>Sammy.js</li>
-                            <li>Grunt</li>
-                            <li>jQuery</li>
+                            <li>React 19</li>
+                            <li>Next.js 15</li>
+                            <li>Astro</li>
+                            <li>Vue 3</li>
+                            <li>Svelte 5</li>
+                            <li>Solid.js</li>
+                            <li>Qwik</li>
                         </ul>
-                        <h4>Programming</h4>
+                        <h4>Languages</h4>
                         <ul>
-                            <li>C#</li>
-                            <li>PHP</li>
-                            <li>VB.NET</li>
+                            <li>TypeScript</li>
+                            <li>JavaScript (ES2024+)</li>
+                            <li>Rust</li>
+                            <li>Go</li>
+                            <li>Python</li>
                         </ul>
-                        <h4>Database</h4>
+                        <h4>State Management</h4>
                         <ul>
-                            <li>MSSQL</li>
-                            <li>MySQL</li>
-                            <li>Mongo NO SQL</li>
-                            <li>PostgreSQL</li>
-                            <li>TSQL</li>
-                            <li>Linq</li>
-                            <li>Access / Excel</li>
+                            <li>Zustand</li>
+                            <li>Jotai</li>
+                            <li>TanStack Query</li>
+                            <li>Redux Toolkit</li>
+                            <li>Signals</li>
                         </ul>
-                        <h4>Front End</h4>
+                        <h4>Styling</h4>
                         <ul>
-                            <li>HTML5</li>
-                            <li>CSS3</li>
-                            <li>Less CSS</li>
-                            <li>SASS</li>
+                            <li>Tailwind CSS</li>
+                            <li>CSS Modules</li>
+                            <li>Panda CSS</li>
+                            <li>StyleX</li>
+                            <li>Vanilla Extract</li>
                         </ul>
                     </div>
                     <div className="col-md-4">
-                        <h4>Mobile</h4>
+                        <h4>Build Tools</h4>
                         <ul>
-                            <li>jQuery Mobile</li>
-                            <li>Phone Gap</li>
-                            <li>Mono</li>
+                            <li>Vite</li>
+                            <li>Turbopack</li>
+                            <li>esbuild</li>
+                            <li>SWC</li>
+                            <li>Bun</li>
+                            <li>Rspack</li>
                         </ul>
-                        <h4>Microsoft Technologies</h4>
+                        <h4>Testing</h4>
                         <ul>
-                            <li>.NET 5 Framework</li>
-                            <li>Webmatrix</li>
-                            <li>MVC5</li>
-                            <li>ASP.NET Dynamic Data</li>
-                            <li>Azure</li>
-                            <li>WCF / Web Services</li>
-                            <li>Windows Service</li>
-                            <li>Web Forms</li>
-                            <li>Team Server Foundation</li>
+                            <li>Vitest</li>
+                            <li>Playwright</li>
+                            <li>Cypress</li>
+                            <li>Testing Library</li>
+                            <li>Storybook</li>
                         </ul>
-                        <h4>IDE's</h4>
+                        <h4>APIs</h4>
                         <ul>
-                            <li>Visual Studio 2013</li>
-                            <li>NetBeans 7</li>
-                            <li>Eclipse</li>
+                            <li>GraphQL</li>
+                            <li>tRPC</li>
+                            <li>REST</li>
+                            <li>WebSockets</li>
+                            <li>Server-Sent Events</li>
+                        </ul>
+                        <h4>Databases</h4>
+                        <ul>
+                            <li>PostgreSQL</li>
+                            <li>MongoDB</li>
+                            <li>Redis</li>
+                            <li>Prisma</li>
+                            <li>Drizzle ORM</li>
+                            <li>Supabase</li>
+                        </ul>
+                    </div>
+                    <div className="col-md-4">
+                        <h4>Cloud & Infrastructure</h4>
+                        <ul>
+                            <li>Vercel</li>
+                            <li>AWS (Lambda, CloudFront)</li>
+                            <li>Cloudflare Workers</li>
+                            <li>Docker</li>
+                            <li>Kubernetes</li>
+                            <li>Terraform</li>
+                        </ul>
+                        <h4>AI & Tooling</h4>
+                        <ul>
+                            <li>Claude / Copilot</li>
+                            <li>LLM Integration</li>
+                            <li>RAG Pipelines</li>
+                            <li>Prompt Engineering</li>
+                        </ul>
+                        <h4>Mobile & Cross-platform</h4>
+                        <ul>
+                            <li>React Native</li>
+                            <li>Expo</li>
+                            <li>Tauri</li>
+                            <li>PWAs</li>
+                        </ul>
+                        <h4>Observability</h4>
+                        <ul>
+                            <li>Sentry</li>
+                            <li>DataDog</li>
+                            <li>OpenTelemetry</li>
+                            <li>LogRocket</li>
                         </ul>
                         <h4>Design</h4>
                         <ul>
-                            <li>Adobe Photoshop CS5</li>
-                            <li>Gimp</li>
-                            <li>Expression Studio</li>
-                        </ul>
-                    </div>
-                    <div className="col-md-4">
-                        <h4>Misc.</h4>
-                        <ul>
-                            <li>IIS, Apache, XAMP, Tomcat</li>
-                            <li>Amazon Web Services</li>
-                            <li>Mathmatica</li>
-                            <li>SVN, GitHub</li>
-                            <li>Wordpress</li>
-                            <li>Facebook Integration</li>
-                            <li>Google / Bing Maps</li>
-                            <li>Woopra</li>
-                            <li>Google Webmaster Tools</li>
-                            <li>Google Analytics</li>
-                            <li>Google Adwords</li>
-                            <li>PayPal Integration</li>
-                            <li>Belladati</li>
+                            <li>Figma</li>
+                            <li>Design Systems</li>
+                            <li>WCAG Accessibility</li>
                         </ul>
                     </div>
                 </div>
