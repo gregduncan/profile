@@ -8,7 +8,7 @@ interface GtagEventParams {
 declare function gtag(
   command: 'config' | 'event' | 'js' | 'set',
   targetId: string | Date,
-  config?: GtagEventParams
+  config?: GtagEventParams,
 ): void;
 
 interface Window {
