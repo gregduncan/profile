@@ -38,7 +38,7 @@ export default function Projects() {
                                 <div className="col-md-7">
                                     <h3>Aqua Cars</h3>
                                     <p>
-                                        Both Mobile and Desktop applications for the UK’s third largest taxi company were built using HTML5, CSS3 and jQuery. The cross platform mobile website built in
+                                        Both Mobile and Desktop applications for the UK's third largest taxi company were built using HTML5, CSS3 and jQuery. The cross platform mobile website built in
                                         jQuery Mobile and gives the full functionality of a native app but with higher accessibility. Servers side the applications use .NET Webmatrix infrastructure.
                                     </p>
                                     <a className="external" target="_blank" href="http://www.aquacars.co.uk">

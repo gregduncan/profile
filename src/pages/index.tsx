@@ -34,7 +34,7 @@ export default function Home() {
                                 </div>
                                 <div className="col-md-7">
                                     <h3>Aqua Cars</h3>
-                                    <p>Both Mobile and Desktop applicationsfor the UK’s third largest taxi company were built using HTML5,...</p>
+                                    <p>Both Mobile and Desktop applicationsfor the UK's third largest taxi company were built using HTML5,...</p>
                                     <a className="read" href="#projects">
                                         read
                                     </a>
@@ -104,7 +104,7 @@ export default function Home() {
                         <h2>About</h2>
                         <h4 className="margin-bottom-15">Web development plus stuff.</h4>
                         <p className="p-default">
-                            Hi, my name is Greg Duncan and I’m a software developer from Portsmouth, UK. I have been working in application development for over 7 years, and have experience with a
+                            Hi, my name is Greg Duncan and I'm a software developer from Portsmouth, UK. I have been working in application development for over 7 years, and have experience with a
                             number of technologies listed above right.
                         </p>
                         <p className="p-default">Please feel free to contact me regarding any aspect of this site; it would be great to hear from you!</p>
@@ -115,7 +115,7 @@ export default function Home() {
                             width="350"
                             height="200"
                             scrolling="no"
-                            src="https://maps.google.com/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=4-5+Bonhill+St,+London+EC2A+4BX&amp;aq=&amp;sll=37.0625,-95.677068&amp;sspn=51.04407,93.076172&amp;ie=UTF8&amp;hq=&amp;hnear=5+Bonhill+St,+London+EC2A+4BX,+United+Kingdom&amp;t=h&amp;z=14&amp;ll=51.522651,-0.085768&amp;output=embed&iwloc=near"
+                            src="https://maps.google.com/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=4-5+Bonhill+St,+London+EC2A+4BX&amp;aq=&amp;sll=37.0625,-95.677068&amp;sspn=51.04407,93.076172&amp;ie=UTF8&amp;hq=&amp;hnear=5+Bonhill+St,+London+EC2A+4BX,+United+Kingdom&amp;t=h&amp;z=14&amp;ll=51.522651,-0.085768&amp;output=embed"
                         ></iframe>
                     </div>
                 </div>

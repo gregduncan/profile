@@ -1,9 +1,10 @@
-import { ContactForm, NavMenu } from '../components';
+import type { AppProps } from 'next/app';
 import Head from 'next/head';
+import { ContactForm, NavMenu } from '../components';
 
 import '../styles/main.css';
 
-const App = ({ Component, pageProps }) => (
+const App = ({ Component, pageProps }: AppProps) => (
     <>
         <Head>
             <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />

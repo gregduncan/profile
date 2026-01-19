@@ -1,10 +1,16 @@
-import React, { useState } from 'react';
+import React, { useState, FormEvent, ChangeEvent } from 'react';
+
+interface FormState {
+    name: string;
+    email: string;
+    msg: string;
+}
 
 export const ContactForm = () => {
-    const [form, setForm] = useState({ name: '', email: '', msg: '' });
+    const [form, setForm] = useState<FormState>({ name: '', email: '', msg: '' });
     const [sent, setSent] = useState(false);
 
-    function onSubmit(e) {
+    function onSubmit(e: FormEvent<HTMLFormElement>) {
         e.preventDefault();
 
         const body = '\n<table>\n<tbody>\n<tr>\n<td>Name:</td>\n<td>'
@@ -17,7 +23,9 @@ export const ContactForm = () => {
                 event_category: 'Contact us',
                 event_label: `Name: ${form.name};Email:${form.email};Message:${form.msg}`,
             });
-        } catch (e) {}
+        } catch {
+            // Ignore gtag errors
+        }
 
         try {
             Email.send({
@@ -28,13 +36,18 @@ export const ContactForm = () => {
                 From: 'no-reply@aquacars.co.uk',
                 Subject: 'Greg Duncan Website enquiry',
                 Body: body,
-            }).then(function (msg) {
+            }).then(function () {
                 setSent(true);
             });
-        } catch (error) {
+        } catch {
             setSent(true);
         }
     }
+
+    const handleInputChange = (e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+        const { name, value } = e.target;
+        setForm({ ...form, [name]: value });
+    };
 
     return (
         <>
@@ -42,13 +55,13 @@ export const ContactForm = () => {
                 <form onSubmit={onSubmit}>
                     <ul>
                         <li>
-                            <input type="text" placeholder="Name" className="form-control" required value={form.name} onChange={(e) => setForm({ ...form, name: e.target.value })} />
+                            <input type="text" name="name" placeholder="Name" className="form-control" required value={form.name} onChange={handleInputChange} />
                         </li>
                         <li>
-                            <input type="text" placeholder="Email" className="form-control" required value={form.email} onChange={(e) => setForm({ ...form, email: e.target.value })} />
+                            <input type="text" name="email" placeholder="Email" className="form-control" required value={form.email} onChange={handleInputChange} />
                         </li>
                         <li>
-                            <textarea placeholder="Message" className="form-control" required value={form.mesg} onChange={(e) => setForm({ ...form, msg: e.target.value })}></textarea>
+                            <textarea name="msg" placeholder="Message" className="form-control" required value={form.msg} onChange={handleInputChange}></textarea>
                         </li>
                         <li>
                             <button

@@ -7,12 +7,13 @@ import { Toggle } from '../../components/Toggle';
 export default function GDCD() {
     const router = useRouter();
     const { id } = router.query;
+    const yearId = typeof id === 'string' ? id : undefined;
 
     return (
         <>
             <Head>
-                <title>Greg Duncan | U.I Developer | GDCD{id}</title>
-                <meta name="description" content={`U.I and software development specialist – View GDCD from GDCD${id}. Greg Duncan U.I Developer.`}></meta>
+                <title>Greg Duncan | U.I Developer | GDCD{yearId}</title>
+                <meta name="description" content={`U.I and software development specialist – View GDCD from GDCD${yearId}. Greg Duncan U.I Developer.`}></meta>
             </Head>
             <div className="page cd-listing">
                 <h2 className="margin-bottom-30">GDCD</h2>
@@ -22,36 +23,36 @@ export default function GDCD() {
                 </p>
                 <ul className="listing">
                     <li>Please select year:</li>
-                    <li className={id === '2013' ? 'active' : ''}>
+                    <li className={yearId === '2013' ? 'active' : ''}>
                         <Link href="/gdcd/2013">2013</Link>
                     </li>
-                    <li className={id === '2012' ? 'active' : ''}>
+                    <li className={yearId === '2012' ? 'active' : ''}>
                         <Link href="/gdcd/2012">2012</Link>
                     </li>
-                    <li className={id === '2011' ? 'active' : ''}>
+                    <li className={yearId === '2011' ? 'active' : ''}>
                         <Link href="/gdcd/2011">2011</Link>
                     </li>
-                    <li className={id === '2010' ? 'active' : ''}>
+                    <li className={yearId === '2010' ? 'active' : ''}>
                         <Link href="/gdcd/2010">2010</Link>
                     </li>
-                    <li className={id === '2009' ? 'active' : ''}>
+                    <li className={yearId === '2009' ? 'active' : ''}>
                         <Link href="/gdcd/2009">2009</Link>
                     </li>
-                    <li className={id === '2008' ? 'active' : ''}>
+                    <li className={yearId === '2008' ? 'active' : ''}>
                         <Link href="/gdcd/2008">2008</Link>
                     </li>
-                    <li className={id === '2007' ? 'active' : ''}>
+                    <li className={yearId === '2007' ? 'active' : ''}>
                         <Link href="/gdcd/2007">2007</Link>
                     </li>
-                    <li className={id === '2005' ? 'active' : ''}>
+                    <li className={yearId === '2005' ? 'active' : ''}>
                         <Link href="/gdcd/2005">2005</Link>
                     </li>
-                    <li className={id === '2004' ? 'active' : ''}>
+                    <li className={yearId === '2004' ? 'active' : ''}>
                         <Link href="/gdcd/2004">2004</Link>
                     </li>
                 </ul>
                 <div id="listing">
-                    <Toggle visible={id === '2013'}>
+                    <Toggle visible={yearId === '2013'}>
                         <div className="row">
                             <div className="col-md-6">
                                 <div className="track">
@@ -153,7 +154,7 @@ export default function GDCD() {
                             </div>
                         </div>
                     </Toggle>
-                    <Toggle visible={id === '2012'}>
+                    <Toggle visible={yearId === '2012'}>
                         <div className="row">
                             <div className="col-md-6">
                                 <div className="track">
@@ -255,7 +256,7 @@ export default function GDCD() {
                             </div>
                         </div>
                     </Toggle>
-                    <Toggle visible={id === '2011'}>
+                    <Toggle visible={yearId === '2011'}>
                         <div className="row">
                             <div className="col-md-6">
                                 <div className="track">
@@ -357,7 +358,7 @@ export default function GDCD() {
                             </div>
                         </div>
                     </Toggle>
-                    <Toggle visible={id === '2010'}>
+                    <Toggle visible={yearId === '2010'}>
                         <div className="row">
                             <div className="col-md-6">
                                 <div className="track">
@@ -459,7 +460,7 @@ export default function GDCD() {
                             </div>
                         </div>
                     </Toggle>
-                    <Toggle visible={id === '2009'}>
+                    <Toggle visible={yearId === '2009'}>
                         <div className="row">
                             <div className="col-md-6">
                                 <div className="track">
@@ -561,7 +562,7 @@ export default function GDCD() {
                             </div>
                         </div>
                     </Toggle>
-                    <Toggle visible={id === '2008'}>
+                    <Toggle visible={yearId === '2008'}>
                         <div className="row">
                             <div className="col-md-6">
                                 <div className="track">
@@ -657,7 +658,7 @@ export default function GDCD() {
                             </div>
                         </div>
                     </Toggle>
-                    <Toggle visible={id === '2007'}>
+                    <Toggle visible={yearId === '2007'}>
                         <div className="row">
                             <div className="col-md-6">
                                 <div className="track">
@@ -753,7 +754,7 @@ export default function GDCD() {
                             </div>
                         </div>
                     </Toggle>
-                    <Toggle visible={id === '2005'}>
+                    <Toggle visible={yearId === '2005'}>
                         <div className="row">
                             <div className="col-md-6">
                                 <div className="track">
@@ -868,7 +869,7 @@ export default function GDCD() {
                             </div>
                         </div>
                     </Toggle>
-                    <Toggle visible={id === '2004'}>
+                    <Toggle visible={yearId === '2004'}>
                         <div className="row">
                             <div className="col-md-6">
                                 <div className="track">
