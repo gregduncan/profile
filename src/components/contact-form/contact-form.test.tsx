@@ -1,7 +1,7 @@
 import { render, screen, fireEvent, waitFor } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import { describe, it, expect, vi, beforeEach } from 'vitest';
-import { ContactForm } from './ContactForm';
+import { ContactForm } from './contact-form';
 
 describe('ContactForm', () => {
     beforeEach(() => {

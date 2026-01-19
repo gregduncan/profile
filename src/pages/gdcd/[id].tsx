@@ -2,7 +2,7 @@ import Head from 'next/head';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 
-import { Toggle } from '../../components/Toggle';
+import { Toggle } from '../../components/toggle/toggle';
 
 export default function GDCD() {
     const router = useRouter();

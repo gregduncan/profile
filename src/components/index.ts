@@ -1,5 +1,5 @@
-import { ContactForm } from './ContactForm';
-import { NavMenu } from './NavMenu';
-import { Toggle } from './Toggle';
+import { ContactForm } from './contact-form/contact-form';
+import { NavMenu } from './nav-menu/nav-menu';
+import { Toggle } from './toggle/toggle';
 
 export { ContactForm, NavMenu, Toggle };
