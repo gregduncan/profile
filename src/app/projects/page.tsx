@@ -10,7 +10,53 @@ export default function Projects() {
   return (
     <div className="page">
       <h2 className="margin-bottom-30">Projects</h2>
+      
       <div className="row">
+        <div className="col-md-6">
+          <div className="project full">
+            <div className="row">
+              <div className="col-md-5">
+                <div className="project-image project-gigraptor"></div>
+              </div>
+              <div className="col-md-7">
+                <h3>GigRaptor</h3>
+                <p>
+                  The ultimate gig finder app built with Next.js and React Server
+                  Components. Features Turborepo monorepo architecture, TypeScript, Tailwind CSS, and
+                  comprehensive testing with Vitest. Server-side rendering for optimal performance
+                  and SEO, with real-time data synchronization and responsive design.
+                </p>
+                <a className="external" target="_blank" href="https://www.gigraptor.com">
+                  www.gigraptor.com
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div className="col-md-6">
+          <div className="project full">
+            <div className="row">
+              <div className="col-md-5">
+                <div className="project-image project-adaptjs"></div>
+              </div>
+              <div className="col-md-7">
+                <h3>Adapt.js</h3>
+                <p>
+                  An in-house component library, designed for building
+                  adaptive, responsive user interfaces. Features a modular architecture with
+                  tree-shakeable components, full Javascript support, comprehensive accessibility
+                  compliance, and seamless integration with React and React Native.
+                </p>
+                <a className="external" target="_blank" href="https://github.com/gregduncan/adapt">
+                  www.adaptjs.org
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+     <div className="row">
         <div className="col-md-6">
           <div className="project full">
             <div className="row">
@@ -54,6 +100,7 @@ export default function Projects() {
           </div>
         </div>
       </div>
+
       <div className="row">
         <div className="col-md-6">
           <div className="project full">

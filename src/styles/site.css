@@ -415,6 +415,16 @@ body {
 .project-instant {
   background-position: 0 -1300px;
 }
+.project-gigraptor {
+  background-image: url('/images/projects/gigraptor.svg');
+  background-size: cover;
+  background-position: center;
+}
+.project-adaptjs {
+  background-image: url('/images/projects/adaptjs.svg');
+  background-size: cover;
+  background-position: center;
+}
 .project-description {
   float: left;
   width: 350px;
