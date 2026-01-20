@@ -1,7 +1,7 @@
 import { render, screen } from '@testing-library/react';
 import { describe, expect, it } from 'vitest';
 
-import Skills from '../../pages/skills';
+import Skills from '../../app/skills/page';
 
 describe('Skills page', () => {
   it('renders the skills heading', () => {

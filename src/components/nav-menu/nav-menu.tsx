@@ -1,20 +1,22 @@
+'use client';
+
 import Link from 'next/link';
-import { useRouter } from 'next/router';
+import { usePathname } from 'next/navigation';
 
 export const NavMenu = () => {
-  const router = useRouter();
+  const pathname = usePathname();
   return (
     <ul className="nav overflow">
-      <li className={router.pathname === '/' ? 'active' : ''}>
+      <li className={pathname === '/' ? 'active' : ''}>
         <Link href="/">home</Link>
       </li>
-      <li className={router.pathname === '/projects' ? 'active' : ''}>
+      <li className={pathname === '/projects' ? 'active' : ''}>
         <Link href="/projects">projects</Link>
       </li>
-      <li className={router.pathname === '/skills' ? 'active' : ''}>
+      <li className={pathname === '/skills' ? 'active' : ''}>
         <Link href="/skills">skills</Link>
       </li>
-      <li className={router.pathname.includes('gdcd') ? 'active' : ''}>
+      <li className={pathname?.includes('gdcd') ? 'active' : ''}>
         <Link href="/gdcd/2013">gdcd</Link>
       </li>
     </ul>
