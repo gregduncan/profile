@@ -17,7 +17,7 @@ export const NavMenu = () => {
         <Link href="/skills">skills</Link>
       </li>
       <li className={pathname?.includes('gdcd') ? 'active' : ''}>
-        <Link href="/gdcd/2013">gdcd</Link>
+        <Link href="/gdcd/2025">gdcd</Link>
       </li>
     </ul>
   );
