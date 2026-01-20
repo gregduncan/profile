@@ -1,9 +1,8 @@
 'use client';
 
-import Link from 'next/link';
-
 import { Track } from '@/components/track';
 import type { YearData } from '@/types/gdcd';
+import Link from 'next/link';
 
 interface GDCDContentProps {
   yearData: YearData;
@@ -14,7 +13,7 @@ export function GDCDContent({ yearData, allYears }: GDCDContentProps) {
   const { year, spotifyUrl, tracks } = yearData;
 
   // Pair tracks for two-column layout
-  const trackPairs: [typeof tracks[0], typeof tracks[0] | undefined][] = [];
+  const trackPairs: [(typeof tracks)[0], (typeof tracks)[0] | undefined][] = [];
   for (let i = 0; i < tracks.length; i += 2) {
     trackPairs.push([tracks[i], tracks[i + 1]]);
   }

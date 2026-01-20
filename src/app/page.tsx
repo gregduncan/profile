@@ -11,39 +11,44 @@ export default function Home() {
     <div className="page">
       <div className="row row-top">
         <h2 className="margin-bottom-30">&nbsp;&nbsp;Latest projects</h2>
+
         <div className="col-md-6">
-          <div className="project">
+          <div className="project full">
             <div className="row">
               <div className="col-md-5">
-                <div className="project-image project-segmantics"></div>
+                <div className="project-image project-gigraptor"></div>
               </div>
               <div className="col-md-7">
-                <h3>Segmantics</h3>
+                <h3>GigRaptor</h3>
                 <p>
-                  The world's first software as a service risk management webapp. Built using the
-                  latest JavaScript...
+                  The ultimate gig finder app built with Next.js and React Server Components.
+                  Features Turborepo monorepo architecture, TypeScript, Tailwind CSS, and
+                  comprehensive testing with Vitest. Server-side rendering for optimal performance
+                  and SEO, with real-time data synchronization and responsive design.
                 </p>
-                <a className="read" href="#projects">
-                  read
+                <a className="external" target="_blank" href="https://www.gigraptor.com">
+                  www.gigraptor.com
                 </a>
               </div>
             </div>
           </div>
         </div>
         <div className="col-md-6">
-          <div className="project">
+          <div className="project full">
             <div className="row">
               <div className="col-md-5">
-                <div className="project-image project-aqua"></div>
+                <div className="project-image project-adaptjs"></div>
               </div>
               <div className="col-md-7">
-                <h3>Aqua Cars</h3>
+                <h3>Adapt.js</h3>
                 <p>
-                  Both Mobile and Desktop applicationsfor the UK's third largest taxi company were
-                  built using HTML5,...
+                  An in-house component library, designed for building adaptive, responsive user
+                  interfaces. Features a modular architecture with tree-shakeable components, full
+                  Javascript support, comprehensive accessibility compliance, and seamless
+                  integration with React and React Native.
                 </p>
-                <a className="read" href="#projects">
-                  read
+                <a className="external" target="_blank" href="https://github.com/gregduncan/adapt">
+                  www.adaptjs.org
                 </a>
               </div>
             </div>
@@ -77,10 +82,10 @@ export default function Home() {
                 <div className="col-md-5">
                   <span>Graph QL</span>
                 </div>
-                <div className="col-md-5">ES6</div>
+                <div className="col-md-5">Electron</div>
               </div>
               <div className="row">
-                <div className="col-md-4">Snowpack</div>
+                <div className="col-md-4">AI First</div>
                 <div className="col-md-4">
                   <span>Knockout</span>
                 </div>
@@ -98,7 +103,7 @@ export default function Home() {
               <div className="row">
                 <div className="col-md-6">React Native</div>
                 <div className="col-md-6">
-                  <span>Cypress</span>
+                  <span>Playwright</span>
                 </div>
               </div>
             </div>
@@ -112,7 +117,7 @@ export default function Home() {
           <h4 className="margin-bottom-15">Web development plus stuff.</h4>
           <p className="p-default">
             Hi, my name is Greg Duncan and I'm a software developer from Portsmouth, UK. I have been
-            working in application development for over 7 years, and have experience with a number
+            working in application development for over 21 years, and have experience with a number
             of technologies listed above right.
           </p>
           <p className="p-default">

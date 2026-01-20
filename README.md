@@ -15,8 +15,6 @@ A modern, responsive personal portfolio website built with Next.js and React.
 - 🔌 **API Routes** - RESTful endpoints for GDCD data
 - 📦 **Static Generation** - Pre-rendered pages for optimal performance
 
-
-
 ## 📁 Project Structure
 
 ```
@@ -49,19 +47,17 @@ A personal music archive featuring top tracks from **2004**.
 - 🖼️ Album artwork display
 - 🔗 API endpoints: `/api/gdcd` and `/api/gdcd/[year]`
 
-
-
 ## 🛠️ Tech Stack
 
-| Category | Technology |
-|----------|------------|
-| ⚡ Framework | Next.js |
-| ⚛️ UI Library | React |
-| 📘 Language | TypeScript |
-| 🧪 Testing | Vitest + Testing Library |
-| 💅 Styling | CSS + Bootstrap |
-| 📦 Package Manager | pnpm |
-| 🟢 Runtime | Node.js 24+ |
+| Category           | Technology               |
+| ------------------ | ------------------------ |
+| ⚡ Framework       | Next.js                  |
+| ⚛️ UI Library      | React                    |
+| 📘 Language        | TypeScript               |
+| 🧪 Testing         | Vitest + Testing Library |
+| 💅 Styling         | CSS + Bootstrap          |
+| 📦 Package Manager | pnpm                     |
+| 🟢 Runtime         | Node.js 24+              |
 
 ---
 
@@ -126,20 +122,19 @@ pnpm format
 
 ## 📄 Pages
 
-| Page | Route | Description |
-|------|-------|-------------|
-| 🏠 Home | `/` | Introduction and contact form |
-| 💼 Projects | `/projects` | Portfolio of work including GigRaptor & Adapt.js |
-| 🎯 Skills | `/skills` | Technical skills and expertise |
-| 🎵 GDCD | `/gdcd/[year]` | Music compilations by year (2004-2025) |
-
+| Page        | Route          | Description                                      |
+| ----------- | -------------- | ------------------------------------------------ |
+| 🏠 Home     | `/`            | Introduction and contact form                    |
+| 💼 Projects | `/projects`    | Portfolio of work including GigRaptor & Adapt.js |
+| 🎯 Skills   | `/skills`      | Technical skills and expertise                   |
+| 🎵 GDCD     | `/gdcd/[year]` | Music compilations by year (2004-2025)           |
 
 ## 🔌 API Endpoints
 
-| Endpoint | Method | Description |
-|----------|--------|-------------|
-| `/api/gdcd` | GET | Get all available years |
-| `/api/gdcd/[year]` | GET | Get tracks for a specific year |
+| Endpoint           | Method | Description                    |
+| ------------------ | ------ | ------------------------------ |
+| `/api/gdcd`        | GET    | Get all available years        |
+| `/api/gdcd/[year]` | GET    | Get tracks for a specific year |
 
 ## 🧪 Test Coverage
 
@@ -152,6 +147,7 @@ pnpm format
 ## 👤 Author
 
 **Greg Duncan**
+
 - 🌐 Website: [www.gregduncan.co.uk](www.gregduncan.co.uk)
 - 🐙 GitHub: [@gregduncan](https://github.com/gregduncan)
 

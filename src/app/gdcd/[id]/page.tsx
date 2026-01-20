@@ -1,7 +1,6 @@
-import { notFound } from 'next/navigation';
-
 import gdcdData from '@/data/gdcd.json';
 import type { YearData } from '@/types/gdcd';
+import { notFound } from 'next/navigation';
 
 import { GDCDContent } from './gdcd-content';
 
