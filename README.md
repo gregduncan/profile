@@ -1,15 +1,15 @@
 # 👨‍💻 Greg Duncan - Personal Portfolio
 
-A modern, responsive personal portfolio website built with Next.js 15 and React 19.
+A modern, responsive personal portfolio website built with Next.js and React.
 
-🌐 **Live Site:** [gregduncan.dev](https://gregduncan.dev)
+🌐 **Live Site:** [gregduncan.co.uk](https://gregduncan.co.uk)
 
 ---
 
 ## ✨ Features
 
-- 🚀 **Next.js 15** with App Router and React Server Components
-- ⚛️ **React 19** with the latest features
+- 🚀 **Next.js** with App Router and React Server Components
+- ⚛️ **React** with the latest features
 - 📝 **TypeScript** for type safety
 - 🎨 **Responsive Design** with Bootstrap grid
 - 🧪 **Vitest** for unit testing with Testing Library
@@ -46,7 +46,7 @@ src/
 
 ## 🎵 GDCD (Greg Duncan's Compilation Disc)
 
-A personal music archive featuring top tracks from **2004 to 2025**.
+A personal music archive featuring top tracks from **2004**.
 
 - 📀 Data-driven rendering from JSON
 - 🎧 Spotify playlist integration
@@ -59,10 +59,10 @@ A personal music archive featuring top tracks from **2004 to 2025**.
 
 | Category | Technology |
 |----------|------------|
-| ⚡ Framework | Next.js 15 |
-| ⚛️ UI Library | React 19 |
-| 📘 Language | TypeScript 5.7 |
-| 🧪 Testing | Vitest 3 + Testing Library |
+| ⚡ Framework | Next.js |
+| ⚛️ UI Library | React |
+| 📘 Language | TypeScript |
+| 🧪 Testing | Vitest + Testing Library |
 | 💅 Styling | CSS + Bootstrap |
 | 📦 Package Manager | pnpm |
 | 🟢 Runtime | Node.js 24+ |
@@ -160,17 +160,10 @@ pnpm format
 
 ---
 
-## 📜 License
-
-This project is private and proprietary.
-
----
-
 ## 👤 Author
 
 **Greg Duncan**
-- 🌐 Website: [gregduncan.dev](https://gregduncan.dev)
-- 💼 LinkedIn: [gregduncan](https://linkedin.com/in/gregduncan)
+- 🌐 Website: [www.gregduncan.co.uk](www.gregduncan.co.uk)
 - 🐙 GitHub: [@gregduncan](https://github.com/gregduncan)
 
 ---
