@@ -4,8 +4,6 @@ A modern, responsive personal portfolio website built with Next.js and React.
 
 🌐 **Live Site:** [gregduncan.co.uk](https://gregduncan.co.uk)
 
----
-
 ## ✨ Features
 
 - 🚀 **Next.js** with App Router and React Server Components
@@ -17,13 +15,13 @@ A modern, responsive personal portfolio website built with Next.js and React.
 - 🔌 **API Routes** - RESTful endpoints for GDCD data
 - 📦 **Static Generation** - Pre-rendered pages for optimal performance
 
----
+
 
 ## 📁 Project Structure
 
 ```
 src/
-├── app/                    # Next.js App Router pages
+├── app/                   # Next.js App Router pages
 │   ├── api/               # API route handlers
 │   │   └── gdcd/          # GDCD data endpoints
 │   ├── gdcd/[id]/         # Dynamic GDCD year pages
@@ -42,8 +40,6 @@ src/
 └── types/                 # TypeScript type definitions
 ```
 
----
-
 ## 🎵 GDCD (Greg Duncan's Compilation Disc)
 
 A personal music archive featuring top tracks from **2004**.
@@ -53,7 +49,7 @@ A personal music archive featuring top tracks from **2004**.
 - 🖼️ Album artwork display
 - 🔗 API endpoints: `/api/gdcd` and `/api/gdcd/[year]`
 
----
+
 
 ## 🛠️ Tech Stack
 
@@ -128,8 +124,6 @@ pnpm test:coverage
 pnpm format
 ```
 
----
-
 ## 📄 Pages
 
 | Page | Route | Description |
@@ -139,7 +133,6 @@ pnpm format
 | 🎯 Skills | `/skills` | Technical skills and expertise |
 | 🎵 GDCD | `/gdcd/[year]` | Music compilations by year (2004-2025) |
 
----
 
 ## 🔌 API Endpoints
 
@@ -148,8 +141,6 @@ pnpm format
 | `/api/gdcd` | GET | Get all available years |
 | `/api/gdcd/[year]` | GET | Get tracks for a specific year |
 
----
-
 ## 🧪 Test Coverage
 
 - ✅ Component unit tests
@@ -157,8 +148,6 @@ pnpm format
 - ✅ Navigation tests
 - ✅ Form validation tests
 - ✅ GDCD content tests
-
----
 
 ## 👤 Author
 
