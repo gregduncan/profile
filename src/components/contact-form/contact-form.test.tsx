@@ -1,4 +1,4 @@
-import { fireEvent, render, screen, waitFor } from '@testing-library/react';
+import { render, screen, waitFor } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import { beforeEach, describe, expect, it, vi } from 'vitest';
 
@@ -7,9 +7,7 @@ import { ContactForm } from '.';
 describe('ContactForm', () => {
   beforeEach(() => {
     vi.clearAllMocks();
-    (window as typeof window & { Email: { send: ReturnType<typeof vi.fn> } }).Email = {
-      send: vi.fn().mockResolvedValue('OK'),
-    };
+    global.fetch = vi.fn();
     (window as typeof window & { gtag: ReturnType<typeof vi.fn> }).gtag = vi.fn();
   });
 
@@ -51,7 +49,11 @@ describe('ContactForm', () => {
     expect(submitButton).not.toBeDisabled();
   });
 
-  it('calls Email.send on form submit', async () => {
+  it('calls Formspree API on form submit', async () => {
+    vi.mocked(global.fetch).mockResolvedValueOnce({
+      ok: true,
+    } as Response);
+
     const user = userEvent.setup();
     render(<ContactForm />);
 
@@ -62,15 +64,27 @@ describe('ContactForm', () => {
     const submitButton = screen.getByRole('button', { name: 'Send' });
     await user.click(submitButton);
 
-    expect(window.Email.send).toHaveBeenCalledWith(
-      expect.objectContaining({
-        To: 'mail@gregduncan.co.uk',
-        Subject: 'Greg Duncan Website enquiry',
-      }),
-    );
+    await waitFor(() => {
+      expect(global.fetch).toHaveBeenCalledWith(
+        expect.stringContaining('formspree.io'),
+        expect.objectContaining({
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            name: 'John Doe',
+            email: 'john@example.com',
+            message: 'Test message',
+          }),
+        }),
+      );
+    });
   });
 
   it('shows thank you message after successful submit', async () => {
+    vi.mocked(global.fetch).mockResolvedValueOnce({
+      ok: true,
+    } as Response);
+
     const user = userEvent.setup();
     render(<ContactForm />);
 
@@ -85,5 +99,52 @@ describe('ContactForm', () => {
       expect(screen.getByText('Thank you!')).toBeInTheDocument();
     });
     expect(screen.getByText(/Your enquiry has been received/)).toBeInTheDocument();
+  });
+
+  it('shows error message when submit fails', async () => {
+    vi.mocked(global.fetch).mockResolvedValueOnce({
+      ok: false,
+    } as Response);
+
+    const user = userEvent.setup();
+    render(<ContactForm />);
+
+    await user.type(screen.getByPlaceholderText('Name'), 'John Doe');
+    await user.type(screen.getByPlaceholderText('Email'), 'john@example.com');
+    await user.type(screen.getByPlaceholderText('Message'), 'Test message');
+
+    const submitButton = screen.getByRole('button', { name: 'Send' });
+    await user.click(submitButton);
+
+    await waitFor(() => {
+      expect(screen.getByText(/Something went wrong/)).toBeInTheDocument();
+    });
+  });
+
+  it('shows sending state while submitting', async () => {
+    let resolvePromise: (value: Response) => void;
+    vi.mocked(global.fetch).mockReturnValueOnce(
+      new Promise((resolve) => {
+        resolvePromise = resolve;
+      }),
+    );
+
+    const user = userEvent.setup();
+    render(<ContactForm />);
+
+    await user.type(screen.getByPlaceholderText('Name'), 'John Doe');
+    await user.type(screen.getByPlaceholderText('Email'), 'john@example.com');
+    await user.type(screen.getByPlaceholderText('Message'), 'Test message');
+
+    const submitButton = screen.getByRole('button', { name: 'Send' });
+    await user.click(submitButton);
+
+    expect(screen.getByRole('button', { name: 'Sending...' })).toBeDisabled();
+
+    resolvePromise!({ ok: true } as Response);
+
+    await waitFor(() => {
+      expect(screen.getByText('Thank you!')).toBeInTheDocument();
+    });
   });
 });

@@ -305,7 +305,8 @@ body {
 .sidebar ul > li {
   margin-bottom: 15px;
 }
-.sidebar input[type='text'] {
+.sidebar input[type='text'],
+.sidebar input[type='email'] {
   width: 230px;
   border: 3px solid #5f5050;
   border-radius: 3px;

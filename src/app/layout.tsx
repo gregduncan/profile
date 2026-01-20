@@ -110,7 +110,6 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             </div>
           </div>
         </div>
-        <Script src="https://smtpjs.com/v3/smtp.js" strategy="beforeInteractive" />
       </body>
     </html>
   );
