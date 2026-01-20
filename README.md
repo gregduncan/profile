@@ -1,13 +1,156 @@
-# Profile [React]
+# 👨‍💻 Greg Duncan - Personal Portfolio
 
-> ✨ Bootstrapped with Next.js.
+A modern, responsive personal portfolio website built with Next.js and React.
 
-## Available Scripts
+🌐 **Live Site:** [gregduncan.co.uk](https://gregduncan.co.uk)
 
-### npm dev
+## ✨ Features
 
-Runs the app in the development mode.
-Open http://localhost:3000 to view it in the browser.
+- 🚀 **Next.js** with App Router and React Server Components
+- ⚛️ **React** with the latest features
+- 📝 **TypeScript** for type safety
+- 🎨 **Responsive Design** with Bootstrap grid
+- 🧪 **Vitest** for unit testing with Testing Library
+- 📊 **Data-Driven Content** - GDCD music archive powered by JSON
+- 🔌 **API Routes** - RESTful endpoints for GDCD data
+- 📦 **Static Generation** - Pre-rendered pages for optimal performance
 
-The page will reload if you make edits.
-You will also see any lint errors in the console.
+## 📁 Project Structure
+
+```
+src/
+├── app/                   # Next.js App Router pages
+│   ├── api/               # API route handlers
+│   │   └── gdcd/          # GDCD data endpoints
+│   ├── gdcd/[id]/         # Dynamic GDCD year pages
+│   ├── projects/          # Projects showcase
+│   ├── skills/            # Skills & technologies
+│   ├── layout.tsx         # Root layout
+│   └── page.tsx           # Homepage
+├── components/            # Reusable UI components
+│   ├── contact-form/      # Contact form with validation
+│   ├── nav-menu/          # Navigation menu
+│   ├── toggle/            # Toggle visibility component
+│   └── track/             # Music track display
+├── data/                  # JSON data files
+│   └── gdcd.json          # 17 years of music data
+├── styles/                # CSS stylesheets
+└── types/                 # TypeScript type definitions
+```
+
+## 🎵 GDCD (Greg Duncan's Compilation Disc)
+
+A personal music archive featuring top tracks from **2004**.
+
+- 📀 Data-driven rendering from JSON
+- 🎧 Spotify playlist integration
+- 🖼️ Album artwork display
+- 🔗 API endpoints: `/api/gdcd` and `/api/gdcd/[year]`
+
+## 🛠️ Tech Stack
+
+| Category           | Technology               |
+| ------------------ | ------------------------ |
+| ⚡ Framework       | Next.js                  |
+| ⚛️ UI Library      | React                    |
+| 📘 Language        | TypeScript               |
+| 🧪 Testing         | Vitest + Testing Library |
+| 💅 Styling         | CSS + Bootstrap          |
+| 📦 Package Manager | pnpm                     |
+| 🟢 Runtime         | Node.js 24+              |
+
+---
+
+## 🚀 Getting Started
+
+### Prerequisites
+
+- Node.js 24 or higher
+- pnpm
+
+### Installation
+
+```bash
+# Clone the repository
+git clone https://github.com/gregduncan/profile.git
+
+# Navigate to the project
+cd profile
+
+# Install dependencies
+pnpm install
+```
+
+### Development
+
+```bash
+# Start development server
+pnpm dev
+```
+
+Open [http://localhost:3000](http://localhost:3000) in your browser.
+
+### Build
+
+```bash
+# Create production build
+pnpm build
+
+# Start production server
+pnpm start
+```
+
+### Testing
+
+```bash
+# Run tests in watch mode
+pnpm test
+
+# Run tests once
+pnpm test:run
+
+# Run tests with coverage
+pnpm test:coverage
+```
+
+### Formatting
+
+```bash
+# Format code with Prettier
+pnpm format
+```
+
+## 📄 Pages
+
+| Page        | Route          | Description                                      |
+| ----------- | -------------- | ------------------------------------------------ |
+| 🏠 Home     | `/`            | Introduction and contact form                    |
+| 💼 Projects | `/projects`    | Portfolio of work including GigRaptor & Adapt.js |
+| 🎯 Skills   | `/skills`      | Technical skills and expertise                   |
+| 🎵 GDCD     | `/gdcd/[year]` | Music compilations by year (2004-2025)           |
+
+## 🔌 API Endpoints
+
+| Endpoint           | Method | Description                    |
+| ------------------ | ------ | ------------------------------ |
+| `/api/gdcd`        | GET    | Get all available years        |
+| `/api/gdcd/[year]` | GET    | Get tracks for a specific year |
+
+## 🧪 Test Coverage
+
+- ✅ Component unit tests
+- ✅ Page rendering tests
+- ✅ Navigation tests
+- ✅ Form validation tests
+- ✅ GDCD content tests
+
+## 👤 Author
+
+**Greg Duncan**
+
+- 🌐 Website: [www.gregduncan.co.uk](www.gregduncan.co.uk)
+- 🐙 GitHub: [@gregduncan](https://github.com/gregduncan)
+
+---
+
+Made with ❤️ and ☕

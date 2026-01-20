@@ -1,0 +1,81 @@
+<svg width="294" height="260" viewBox="0 0 294 260" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1a1a2e"/>
+      <stop offset="50%" style="stop-color:#16213e"/>
+      <stop offset="100%" style="stop-color:#0f3460"/>
+    </linearGradient>
+    <linearGradient id="textGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#e94560"/>
+      <stop offset="50%" style="stop-color:#ff6b6b"/>
+      <stop offset="100%" style="stop-color:#e94560"/>
+    </linearGradient>
+    <linearGradient id="accentGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#00d9ff"/>
+      <stop offset="100%" style="stop-color:#0099ff"/>
+    </linearGradient>
+    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="294" height="260" fill="url(#bgGrad)"/>
+
+  <!-- Decorative grid lines -->
+  <g opacity="0.1" stroke="#00d9ff" stroke-width="0.5">
+    <line x1="0" y1="65" x2="294" y2="65"/>
+    <line x1="0" y1="130" x2="294" y2="130"/>
+    <line x1="0" y1="195" x2="294" y2="195"/>
+    <line x1="73" y1="0" x2="73" y2="260"/>
+    <line x1="147" y1="0" x2="147" y2="260"/>
+    <line x1="221" y1="0" x2="221" y2="260"/>
+  </g>
+
+  <!-- Decorative corner brackets -->
+  <g stroke="url(#accentGrad)" stroke-width="2" fill="none" opacity="0.6">
+    <path d="M 20 40 L 20 20 L 40 20"/>
+    <path d="M 254 20 L 274 20 L 274 40"/>
+    <path d="M 274 220 L 274 240 L 254 240"/>
+    <path d="M 40 240 L 20 240 L 20 220"/>
+  </g>
+
+  <!-- Floating particles -->
+  <g fill="#00d9ff" opacity="0.4">
+    <circle cx="50" cy="80" r="2"/>
+    <circle cx="244" cy="180" r="2"/>
+    <circle cx="80" cy="200" r="1.5"/>
+    <circle cx="214" cy="60" r="1.5"/>
+    <circle cx="147" cy="45" r="1"/>
+  </g>
+
+  <!-- Main text "Adapt" -->
+  <text x="147" y="145"
+        font-family="system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif"
+        font-size="52"
+        font-weight="700"
+        fill="url(#textGrad)"
+        text-anchor="middle"
+        filter="url(#glow)"
+        letter-spacing="2">Adapt</text>
+
+  <!-- Subtitle ".js" -->
+  <text x="147" y="180"
+        font-family="monospace"
+        font-size="20"
+        fill="url(#accentGrad)"
+        text-anchor="middle"
+        opacity="0.9">.js</text>
+
+  <!-- Bottom tagline -->
+  <text x="147" y="220"
+        font-family="system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif"
+        font-size="11"
+        fill="#888"
+        text-anchor="middle"
+        letter-spacing="3">COMPONENT LIBRARY</text>
+</svg>

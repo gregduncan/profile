@@ -1,55 +1,55 @@
 ﻿@media only screen and (max-width: 1070px) {
-    .paper,
-    .sidebar,
-    .row-top {
-        display: none;
-    }
+  .paper,
+  .sidebar,
+  .row-top {
+    display: none;
+  }
 
-    .container {
-        padding: 10px;
-    }
+  .container {
+    padding: 10px;
+  }
 
-    .navbar {
-        position: relative;
-        margin-bottom: 5px;
-    }
+  .navbar {
+    position: relative;
+    margin-bottom: 5px;
+  }
 
-    .navbar .nav > li {
-        margin: 0 3px;
-        float: none;
-    }
+  .navbar .nav > li {
+    margin: 0 3px;
+    float: none;
+  }
 
-    .navbar .nav > li > a {
-        padding: 5px;
-        font-size: 14px;
-    }
+  .navbar .nav > li > a {
+    padding: 5px;
+    font-size: 14px;
+  }
 
-    .masthead:before {
-        display: none;
-    }
+  .masthead:before {
+    display: none;
+  }
 
-    .masthead:after {
-        display: none;
-    }
+  .masthead:after {
+    display: none;
+  }
 
-    .masthead {
-        margin-left: 0;
-        height: auto;
-        background: none;
-        margin-bottom: 30px;
-    }
+  .masthead {
+    margin-left: 0;
+    height: auto;
+    background: none;
+    margin-bottom: 30px;
+  }
 
-    .masthead > a {
-        position: relative;
-        top: 0;
-        right: 0;
-        display: inline-block;
-        width: 340px;
-        height: 140px;
-        background: url('../../public/images/logo.png') no-repeat;
-    }
+  .masthead > a {
+    position: relative;
+    top: 0;
+    right: 0;
+    display: inline-block;
+    width: 340px;
+    height: 140px;
+    background: url('../../public/images/logo.png') no-repeat;
+  }
 
-    .row-bottom div:last-child {
-        display: none;
-    }
+  .row-bottom div:last-child {
+    display: none;
+  }
 }
