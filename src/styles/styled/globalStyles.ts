@@ -83,7 +83,7 @@ export const GlobalStyles = createGlobalStyle`
   }
 
   /* Responsive utilities */
-  @media only screen and (max-width: ${({ theme }) => theme.breakpoints.mobile}) {
+  @media only screen and (max-width: ${({ theme }) => theme.breakpoints.phone}) {
     iframe {
       width: 100% !important;
       max-width: 350px;

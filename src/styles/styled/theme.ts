@@ -14,7 +14,7 @@ export const theme = {
   },
   breakpoints: {
     md: '992px',
-    mobile: '1070px',
+    phone: '1070px',
   },
   spacing: {
     xs: '5px',

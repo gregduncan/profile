@@ -34,7 +34,7 @@ export const TrackContainer = styled.div`
     font-size: 12px;
   }
 
-  @media only screen and (max-width: ${({ theme }) => theme.breakpoints.mobile}) {
+  @media only screen and (max-width: ${({ theme }) => theme.breakpoints.phone}) {
     > img {
       float: left;
       margin-right: 10px;

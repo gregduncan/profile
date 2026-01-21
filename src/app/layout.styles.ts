@@ -8,7 +8,7 @@ export const StyledContainer = styled.div`
   max-width: 1175px;
   margin: 0 auto;
 
-  @media only screen and (max-width: ${({ theme }) => theme.breakpoints.mobile}) {
+  @media only screen and (max-width: ${({ theme }) => theme.breakpoints.phone}) {
     padding: 10px;
   }
 `;
@@ -50,7 +50,7 @@ export const Masthead = styled.div`
     content: '';
   }
 
-  @media only screen and (max-width: ${({ theme }) => theme.breakpoints.mobile}) {
+  @media only screen and (max-width: ${({ theme }) => theme.breakpoints.phone}) {
     margin-left: 0;
     height: auto;
     background: none;
@@ -86,7 +86,7 @@ export const Logo = styled.a`
     font-family: ${({ theme }) => theme.fonts.heading};
   }
 
-  @media only screen and (max-width: ${({ theme }) => theme.breakpoints.mobile}) {
+  @media only screen and (max-width: ${({ theme }) => theme.breakpoints.phone}) {
     position: relative;
     top: 0;
     right: 0;
@@ -106,7 +106,7 @@ export const StyledRow = styled.div`
   grid-template-columns: repeat(12, 1fr);
   gap: 0;
 
-  @media only screen and (max-width: ${({ theme }) => theme.breakpoints.mobile}) {
+  @media only screen and (max-width: ${({ theme }) => theme.breakpoints.phone}) {
     display: block;
   }
 `;
@@ -116,7 +116,7 @@ export const MainColumn = styled.div`
   padding-right: 15px;
   padding-left: 15px;
 
-  @media only screen and (max-width: ${({ theme }) => theme.breakpoints.mobile}) {
+  @media only screen and (max-width: ${({ theme }) => theme.breakpoints.phone}) {
     grid-column: auto;
     width: 100%;
     padding-right: 0;
@@ -129,7 +129,7 @@ export const SidebarColumn = styled.div`
   padding-right: 15px;
   padding-left: 15px;
 
-  @media only screen and (max-width: ${({ theme }) => theme.breakpoints.mobile}) {
+  @media only screen and (max-width: ${({ theme }) => theme.breakpoints.phone}) {
     display: none;
   }
 `;

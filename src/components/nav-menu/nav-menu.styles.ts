@@ -9,7 +9,7 @@ export const NavContainer = styled.nav`
   text-transform: uppercase;
   font-family: ${({ theme }) => theme.fonts.heading};
 
-  @media only screen and (max-width: ${({ theme }) => theme.breakpoints.mobile}) {
+  @media only screen and (max-width: ${({ theme }) => theme.breakpoints.phone}) {
     position: relative;
     margin-bottom: 5px;
   }
@@ -25,7 +25,7 @@ export const NavList = styled.ul`
 export const NavItem = styled.li<{ $active: boolean }>`
   float: left;
 
-  @media only screen and (max-width: ${({ theme }) => theme.breakpoints.mobile}) {
+  @media only screen and (max-width: ${({ theme }) => theme.breakpoints.phone}) {
     margin: 0 3px;
     float: none;
   }
@@ -40,7 +40,7 @@ export const NavItem = styled.li<{ $active: boolean }>`
     color: ${({ $active, theme }) => ($active ? theme.colors.white : theme.colors.primary)};
     text-shadow: none;
 
-    @media only screen and (max-width: ${({ theme }) => theme.breakpoints.mobile}) {
+    @media only screen and (max-width: ${({ theme }) => theme.breakpoints.phone}) {
       padding: 5px;
       font-size: 14px;
     }

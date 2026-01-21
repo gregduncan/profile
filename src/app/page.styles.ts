@@ -15,7 +15,7 @@ export const RowTop = styled.div`
   grid-template-columns: repeat(12, 1fr);
   gap: 0;
 
-  @media only screen and (max-width: ${({ theme }) => theme.breakpoints.mobile}) {
+  @media only screen and (max-width: ${({ theme }) => theme.breakpoints.phone}) {
     display: none;
   }
 `;
@@ -25,7 +25,7 @@ export const RowBottom = styled.div`
   grid-template-columns: repeat(12, 1fr);
   gap: 0;
 
-  @media only screen and (max-width: ${({ theme }) => theme.breakpoints.mobile}) {
+  @media only screen and (max-width: ${({ theme }) => theme.breakpoints.phone}) {
     div:last-child {
       display: none;
     }
@@ -50,7 +50,7 @@ export const Paper = styled.div`
     content: '';
   }
 
-  @media only screen and (max-width: ${({ theme }) => theme.breakpoints.mobile}) {
+  @media only screen and (max-width: ${({ theme }) => theme.breakpoints.phone}) {
     display: none;
   }
 `;
@@ -60,7 +60,7 @@ export const RowMiddle = styled.div`
   grid-template-columns: repeat(12, 1fr);
   gap: 0;
 
-  @media only screen and (max-width: ${({ theme }) => theme.breakpoints.mobile}) {
+  @media only screen and (max-width: ${({ theme }) => theme.breakpoints.phone}) {
     display: block;
   }
 `;
@@ -81,7 +81,7 @@ export const GDCD = styled.div`
     content: '';
   }
 
-  @media only screen and (max-width: ${({ theme }) => theme.breakpoints.mobile}) {
+  @media only screen and (max-width: ${({ theme }) => theme.breakpoints.phone}) {
     width: 100%;
     height: auto;
     min-height: 198px;
@@ -109,7 +109,7 @@ export const Tech = styled.div`
     color: #999999;
   }
 
-  @media only screen and (max-width: ${({ theme }) => theme.breakpoints.mobile}) {
+  @media only screen and (max-width: ${({ theme }) => theme.breakpoints.phone}) {
     width: 100%;
     height: auto;
   }
@@ -158,10 +158,10 @@ export const Project = styled.div`
     font-weight: bold;
   }
 
-  @media only screen and (max-width: ${({ theme }) => theme.breakpoints.mobile}) {
+  @media only screen and (max-width: ${({ theme }) => theme.breakpoints.phone}) {
     overflow: hidden;
 
-    /* Remove padding from nested Row/Column on mobile */
+    /* Remove padding from nested Row/Column on phone */
     > div {
       padding: 0 !important;
 
@@ -219,7 +219,7 @@ export const ProjectImage = styled.div<{ $variant?: string }>`
     }
   }}
 
-  @media only screen and (max-width: ${({ theme }) => theme.breakpoints.mobile}) {
+  @media only screen and (max-width: ${({ theme }) => theme.breakpoints.phone}) {
     float: left;
     margin: 0 15px 15px 0;
   }
@@ -229,7 +229,7 @@ export const ProjectDescription = styled.div`
   float: left;
   width: 350px;
 
-  @media only screen and (max-width: ${({ theme }) => theme.breakpoints.mobile}) {
+  @media only screen and (max-width: ${({ theme }) => theme.breakpoints.phone}) {
     float: none;
     width: auto;
     overflow: hidden;
