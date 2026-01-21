@@ -29,6 +29,7 @@ export const RowBottom = styled.div`
     div:last-child {
       display: none;
     }
+    display: block;
   }
 `;
 
@@ -58,6 +59,10 @@ export const RowMiddle = styled.div`
   display: grid;
   grid-template-columns: repeat(12, 1fr);
   gap: 0;
+
+  @media only screen and (max-width: ${({ theme }) => theme.breakpoints.mobile}) {
+    display: block;
+  }
 `;
 
 export const GDCD = styled.div`
@@ -74,6 +79,13 @@ export const GDCD = styled.div`
     height: 328px;
     background-image: url('/images/home-middle-tape.png');
     content: '';
+  }
+
+  @media only screen and (max-width: ${({ theme }) => theme.breakpoints.mobile}) {
+    width: 100%;
+    height: auto;
+    min-height: 198px;
+    background-size: contain;
   }
 `;
 
@@ -95,6 +107,11 @@ export const Tech = styled.div`
 
   span {
     color: #999999;
+  }
+
+  @media only screen and (max-width: ${({ theme }) => theme.breakpoints.mobile}) {
+    width: 100%;
+    height: auto;
   }
 `;
 
@@ -139,6 +156,19 @@ export const Project = styled.div`
     font-family: ${({ theme }) => theme.fonts.serif};
     font-style: italic;
     font-weight: bold;
+  }
+
+  @media only screen and (max-width: ${({ theme }) => theme.breakpoints.mobile}) {
+    overflow: hidden;
+
+    /* Remove padding from nested Row/Column on mobile */
+    > div {
+      padding: 0 !important;
+
+      > div {
+        padding: 0 !important;
+      }
+    }
   }
 `;
 
@@ -188,11 +218,22 @@ export const ProjectImage = styled.div<{ $variant?: string }>`
         return '';
     }
   }}
+
+  @media only screen and (max-width: ${({ theme }) => theme.breakpoints.mobile}) {
+    float: left;
+    margin: 0 15px 15px 0;
+  }
 `;
 
 export const ProjectDescription = styled.div`
   float: left;
   width: 350px;
+
+  @media only screen and (max-width: ${({ theme }) => theme.breakpoints.mobile}) {
+    float: none;
+    width: auto;
+    overflow: hidden;
+  }
 `;
 
 export const ReadLink = styled.a`

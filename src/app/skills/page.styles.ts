@@ -22,4 +22,8 @@ export const SkillsContainer = styled.div`
     font-size: 13px;
     margin-bottom: 15px;
   }
+
+  @media only screen and (max-width: ${({ theme }) => theme.breakpoints.mobile}) {
+    display: block;
+  }
 `;

@@ -33,4 +33,12 @@ export const TrackContainer = styled.div`
     font-family: ${({ theme }) => theme.fonts.serif};
     font-size: 12px;
   }
+
+  @media only screen and (max-width: ${({ theme }) => theme.breakpoints.mobile}) {
+    > img {
+      float: left;
+      margin-right: 10px;
+      margin-bottom: 10px;
+    }
+  }
 `;

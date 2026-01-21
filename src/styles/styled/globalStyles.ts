@@ -81,4 +81,16 @@ export const GlobalStyles = createGlobalStyle`
   .margin-top-10 {
     margin-top: 10px;
   }
+
+  /* Responsive utilities */
+  @media only screen and (max-width: ${({ theme }) => theme.breakpoints.mobile}) {
+    iframe {
+      width: 100% !important;
+      max-width: 350px;
+    }
+
+    h2 {
+      font-size: 24px;
+    }
+  }
 `;

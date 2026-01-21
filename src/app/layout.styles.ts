@@ -94,6 +94,10 @@ export const Logo = styled.a`
     width: 340px;
     height: 140px;
     background: url('/images/logo.png') no-repeat;
+
+    &::after {
+      display: none;
+    }
   }
 `;
 
@@ -101,12 +105,23 @@ export const StyledRow = styled.div`
   display: grid;
   grid-template-columns: repeat(12, 1fr);
   gap: 0;
+
+  @media only screen and (max-width: ${({ theme }) => theme.breakpoints.mobile}) {
+    display: block;
+  }
 `;
 
 export const MainColumn = styled.div`
   grid-column: span 9;
   padding-right: 15px;
   padding-left: 15px;
+
+  @media only screen and (max-width: ${({ theme }) => theme.breakpoints.mobile}) {
+    grid-column: auto;
+    width: 100%;
+    padding-right: 0;
+    padding-left: 0;
+  }
 `;
 
 export const SidebarColumn = styled.div`

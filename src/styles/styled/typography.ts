@@ -27,4 +27,8 @@ export const Paragraph = styled.p`
   font-size: 14px;
   margin-bottom: 15px;
   font-family: ${({ theme }) => theme.fonts.serif};
+
+  @media only screen and (max-width: ${({ theme }) => theme.breakpoints.mobile}) {
+    width: 100%;
+  }
 `;
