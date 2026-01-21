@@ -20,12 +20,64 @@ import {
 } from './layout.styles';
 
 export const metadata: Metadata = {
-  title: 'Greg Duncan | Lead Frontend Developer',
+  metadataBase: new URL('https://gregduncan.co.uk'),
+  title: {
+    default: 'Greg Duncan | Lead Frontend Developer',
+    template: '%s | Greg Duncan',
+  },
   description:
-    'U.I and software development specialist – JavaScript, React, Typescript, GraphQL, SEO and more... Greg Duncan U.I Developer.',
-  robots: 'noodp',
-  other: {
-    'google-site-verification': 'b84CMr8_ggjKcJPuGtQiklwchKWu__crWBQRH9xk_qU',
+    'Lead Frontend Developer with 21+ years experience. Specializing in React, TypeScript, Next.js, and modern web technologies. Based in London, UK.',
+  keywords: [
+    'Frontend Developer',
+    'React Developer',
+    'TypeScript',
+    'Next.js',
+    'JavaScript',
+    'UI Developer',
+    'Web Development',
+    'London Developer',
+    'Full Stack Developer',
+  ],
+  authors: [{ name: 'Greg Duncan' }],
+  creator: 'Greg Duncan',
+  publisher: 'Greg Duncan',
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
+  },
+  openGraph: {
+    type: 'website',
+    locale: 'en_GB',
+    url: 'https://gregduncan.co.uk',
+    title: 'Greg Duncan | Lead Frontend Developer',
+    description:
+      'Lead Frontend Developer with 21+ years experience. Specializing in React, TypeScript, Next.js, and modern web technologies.',
+    siteName: 'Greg Duncan Portfolio',
+    images: [
+      {
+        url: '/images/og-image.png',
+        width: 1200,
+        height: 630,
+        alt: 'Greg Duncan - Lead Frontend Developer',
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Greg Duncan | Lead Frontend Developer',
+    description:
+      'Lead Frontend Developer with 21+ years experience. Specializing in React, TypeScript, Next.js, and modern web technologies.',
+    images: ['/images/og-image.png'],
+  },
+  verification: {
+    google: 'b84CMr8_ggjKcJPuGtQiklwchKWu__crWBQRH9xk_qU',
   },
 };
 
@@ -37,6 +89,33 @@ export const viewport = {
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
+  const structuredData = {
+    '@context': 'https://schema.org',
+    '@type': 'Person',
+    name: 'Greg Duncan',
+    jobTitle: 'Lead Frontend Developer',
+    description:
+      'Lead Frontend Developer with 21+ years experience. Specializing in React, TypeScript, Next.js, and modern web technologies.',
+    url: 'https://gregduncan.co.uk',
+    image: 'https://gregduncan.co.uk/images/og-image.png',
+    address: {
+      '@type': 'PostalAddress',
+      addressLocality: 'London',
+      addressCountry: 'United Kingdom',
+    },
+    knowsAbout: [
+      'React',
+      'TypeScript',
+      'Next.js',
+      'JavaScript',
+      'Frontend Development',
+      'Web Development',
+      'UI Development',
+      'Full Stack Development',
+    ],
+    sameAs: ['https://github.com/gregduncan'],
+  };
+
   return (
     <html lang="en">
       <head>
@@ -79,6 +158,10 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <link
           rel="apple-touch-icon-precomposed"
           href="/images/ico/apple-touch-icon-57-precomposed.png"
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
         />
       </head>
       <body>
