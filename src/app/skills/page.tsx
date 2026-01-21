@@ -1,4 +1,7 @@
 import type { Metadata } from 'next';
+import { Column, Heading2 } from '../../styles/styled';
+import { Page } from '../page.styles';
+import { SkillsContainer } from './page.styles';
 
 export const metadata: Metadata = {
   title: 'Greg Duncan | Lead Frontend Developer | Skills',
@@ -8,10 +11,10 @@ export const metadata: Metadata = {
 
 export default function Skills() {
   return (
-    <div className="page">
-      <h2 className="margin-bottom-30">Skills</h2>
-      <div className="row skills">
-        <div className="col-md-4">
+    <Page>
+      <Heading2 className="margin-bottom-30">Skills</Heading2>
+      <SkillsContainer>
+        <Column $span={4}>
           <h4>Frameworks</h4>
           <ul>
             <li>React 19</li>
@@ -46,8 +49,8 @@ export default function Skills() {
             <li>StyleX</li>
             <li>Vanilla Extract</li>
           </ul>
-        </div>
-        <div className="col-md-4">
+        </Column>
+        <Column $span={4}>
           <h4>Build Tools</h4>
           <ul>
             <li>Vite</li>
@@ -82,8 +85,8 @@ export default function Skills() {
             <li>Drizzle ORM</li>
             <li>Supabase</li>
           </ul>
-        </div>
-        <div className="col-md-4">
+        </Column>
+        <Column $span={4}>
           <h4>Cloud & Infrastructure</h4>
           <ul>
             <li>Vercel</li>
@@ -120,8 +123,8 @@ export default function Skills() {
             <li>Design Systems</li>
             <li>WCAG Accessibility</li>
           </ul>
-        </div>
-      </div>
-    </div>
+        </Column>
+      </SkillsContainer>
+    </Page>
   );
 }

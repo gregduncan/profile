@@ -1,3 +1,5 @@
+import { TrackContainer } from './track.styles';
+
 interface TrackProps {
   rank: number;
   title: string;
@@ -9,7 +11,7 @@ interface TrackProps {
 
 export function Track({ rank, title, artist, album, image, year }: TrackProps) {
   return (
-    <div className="track">
+    <TrackContainer>
       <img
         src={`/images/tracks/${year}/${image}`}
         width="80"
@@ -21,6 +23,6 @@ export function Track({ rank, title, artist, album, image, year }: TrackProps) {
       </h3>
       <h4>{artist}</h4>
       <p>Taken from the album '{album}'.</p>
-    </div>
+    </TrackContainer>
   );
 }
