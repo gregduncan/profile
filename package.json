@@ -29,6 +29,7 @@
     "@types/react-dom": "^19.2.3",
     "@types/styled-components": "^5.1.36",
     "@vitejs/plugin-react": "^5.1.2",
+    "babel-plugin-styled-components": "^2.1.4",
     "jsdom": "^27.4.0",
     "prettier": "^3.8.0",
     "typescript": "5.7",
