@@ -12,7 +12,7 @@ export const metadata: Metadata = {
 export default function Skills() {
   return (
     <Page>
-      <Heading2 className="margin-bottom-30">Skills</Heading2>
+      <Heading2 className="mb-30">Skills</Heading2>
       <SkillsContainer>
         <Column $span={4}>
           <h4>Frameworks</h4>
