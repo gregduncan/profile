@@ -1,4 +1,6 @@
 import type { Metadata } from 'next';
+import { Row, Column, Heading2 } from '../../styles/styled';
+import { Page, Project, ProjectImage } from '../page.styles';
 
 export const metadata: Metadata = {
   title: 'Greg Duncan | U.I Developer | Projects',
@@ -8,17 +10,17 @@ export const metadata: Metadata = {
 
 export default function Projects() {
   return (
-    <div className="page">
-      <h2 className="margin-bottom-30">Projects</h2>
+    <Page>
+      <Heading2 className="margin-bottom-30">Projects</Heading2>
 
-      <div className="row">
-        <div className="col-md-6">
-          <div className="project full">
-            <div className="row">
-              <div className="col-md-5">
-                <div className="project-image project-gigraptor"></div>
-              </div>
-              <div className="col-md-7">
+      <Row>
+        <Column $span={6}>
+          <Project className="full">
+            <Row>
+              <Column $span={5}>
+                <ProjectImage $variant="gigraptor" />
+              </Column>
+              <Column $span={7}>
                 <h3>GigRaptor</h3>
                 <p>
                   The ultimate gig finder app built with Next.js and React Server Components.
@@ -29,17 +31,17 @@ export default function Projects() {
                 <a className="external" target="_blank" href="https://www.gigraptor.com">
                   www.gigraptor.com
                 </a>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div className="col-md-6">
-          <div className="project full">
-            <div className="row">
-              <div className="col-md-5">
-                <div className="project-image project-adaptjs"></div>
-              </div>
-              <div className="col-md-7">
+              </Column>
+            </Row>
+          </Project>
+        </Column>
+        <Column $span={6}>
+          <Project className="full">
+            <Row>
+              <Column $span={5}>
+                <ProjectImage $variant="adaptjs" />
+              </Column>
+              <Column $span={7}>
                 <h3>Adapt.js</h3>
                 <p>
                   An in-house component library, designed for building adaptive, responsive user
@@ -50,20 +52,20 @@ export default function Projects() {
                 <a className="external" target="_blank" href="https://github.com/gregduncan/adapt">
                   www.adaptjs.org
                 </a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+              </Column>
+            </Row>
+          </Project>
+        </Column>
+      </Row>
 
-      <div className="row">
-        <div className="col-md-6">
-          <div className="project full">
-            <div className="row">
-              <div className="col-md-5">
-                <div className="project-image project-segmantics"></div>
-              </div>
-              <div className="col-md-7">
+      <Row>
+        <Column $span={6}>
+          <Project className="full">
+            <Row>
+              <Column $span={5}>
+                <ProjectImage $variant="segmantics" />
+              </Column>
+              <Column $span={7}>
                 <h3>Segmantics</h3>
                 <p>
                   The world's first software as a service risk management webapp. Built as a single
@@ -74,17 +76,17 @@ export default function Projects() {
                 <a className="external" target="_blank" href="http://www.segmantics.com">
                   www.segmantics.com
                 </a>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div className="col-md-6">
-          <div className="project full">
-            <div className="row">
-              <div className="col-md-5">
-                <div className="project-image project-aqua"></div>
-              </div>
-              <div className="col-md-7">
+              </Column>
+            </Row>
+          </Project>
+        </Column>
+        <Column $span={6}>
+          <Project className="full">
+            <Row>
+              <Column $span={5}>
+                <ProjectImage $variant="aqua" />
+              </Column>
+              <Column $span={7}>
                 <h3>Aqua Cars</h3>
                 <p>
                   Both Mobile and Desktop applications for the UK's third largest taxi company were
@@ -95,20 +97,20 @@ export default function Projects() {
                 <a className="external" target="_blank" href="http://www.aquacars.co.uk">
                   www.aquacars.co.uk
                 </a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+              </Column>
+            </Row>
+          </Project>
+        </Column>
+      </Row>
 
-      <div className="row">
-        <div className="col-md-6">
-          <div className="project full">
-            <div className="row">
-              <div className="col-md-5">
-                <div className="project-image"></div>
-              </div>
-              <div className="col-md-7">
+      <Row>
+        <Column $span={6}>
+          <Project className="full">
+            <Row>
+              <Column $span={5}>
+                <ProjectImage />
+              </Column>
+              <Column $span={7}>
                 <h3>Target Offices</h3>
                 <p>
                   Target Offices is a multi-tiered ASP.Net application built in C# with an
@@ -119,17 +121,17 @@ export default function Projects() {
                 <a className="external" target="_blank" href="http://www.targetoffices.com">
                   www.targetoffices.com
                 </a>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div className="col-md-6">
-          <div className="project full">
-            <div className="row">
-              <div className="col-md-5">
-                <div className="project-image project-instant"></div>
-              </div>
-              <div className="col-md-7">
+              </Column>
+            </Row>
+          </Project>
+        </Column>
+        <Column $span={6}>
+          <Project className="full">
+            <Row>
+              <Column $span={5}>
+                <ProjectImage $variant="instant" />
+              </Column>
+              <Column $span={7}>
                 <h3>Instant Offices</h3>
                 <p>
                   A complete front-end re-skin, updating HTML, CSS and javaScript. This was a
@@ -140,11 +142,11 @@ export default function Projects() {
                 <a className="external" target="_blank" href="http://www.instantoffices.com">
                   www.instantoffices.com
                 </a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
+              </Column>
+            </Row>
+          </Project>
+        </Column>
+      </Row>
+    </Page>
   );
 }

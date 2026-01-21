@@ -3,7 +3,21 @@ import Script from 'next/script';
 
 import { ContactForm } from '../components/contact-form';
 import { NavMenu } from '../components/nav-menu';
-import '../styles/main.css';
+import StyledComponentsRegistry from '../lib/registry';
+import { Providers } from '../lib/providers';
+import {
+  StyledContainer,
+  NavWrapper,
+  Content,
+  Masthead,
+  Logo,
+  StyledRow,
+  MainColumn,
+  SidebarColumn,
+  Sidebar,
+  Recommends,
+  ContentInner,
+} from './layout.styles';
 
 export const metadata: Metadata = {
   title: 'Greg Duncan | Lead Frontend Developer',
@@ -68,48 +82,52 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         />
       </head>
       <body>
-        <Script
-          src="https://www.googletagmanager.com/gtag/js?id=UA-29473761-12"
-          strategy="afterInteractive"
-        />
-        <Script id="google-analytics" strategy="afterInteractive">
-          {`
+        <StyledComponentsRegistry>
+          <Providers>
+            <Script
+              src="https://www.googletagmanager.com/gtag/js?id=UA-29473761-12"
+              strategy="afterInteractive"
+            />
+            <Script id="google-analytics" strategy="afterInteractive">
+              {`
                         window.dataLayer = window.dataLayer || [];
                         function gtag(){dataLayer.push(arguments);}
                         gtag('js', new Date());
                         gtag('config', 'UA-29473761-12');
                     `}
-        </Script>
-        <div className="container">
-          <div className="navbar">
+            </Script>
+            <StyledContainer>
+          <NavWrapper>
             <NavMenu />
-          </div>
+          </NavWrapper>
 
-          <div className="content overflow">
-            <div className="masthead">
-              <a className="logo"></a>
-            </div>
-            <div className="row">
-              <div className="col-md-9">
-                <div className="content-inner overflow">{children}</div>
-              </div>
-              <div className="col-md-3">
-                <div className="sidebar overflow">
+          <Content className="overflow">
+            <Masthead>
+              <Logo />
+            </Masthead>
+            <StyledRow>
+              <MainColumn>
+                <ContentInner className="overflow">{children}</ContentInner>
+              </MainColumn>
+              <SidebarColumn>
+                <Sidebar className="overflow">
                   <h2>
                     Welcome to my website. Here you can find info on my latest projects, previous
                     work, skills and the infamous GDCDs...
                   </h2>
                   <h3>recommends</h3>
-                  <div className="recommends">
+                  <Recommends>
                     <a href="http://www.weareaugustines.com"></a>
-                  </div>
+                  </Recommends>
                   <h3>get in contact</h3>
                   <ContactForm />
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
+                </Sidebar>
+              </SidebarColumn>
+            </StyledRow>
+          </Content>
+        </StyledContainer>
+          </Providers>
+        </StyledComponentsRegistry>
       </body>
     </html>
   );

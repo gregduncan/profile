@@ -1,6 +1,8 @@
 'use client';
 
 import React, { ChangeEvent, FormEvent, useState } from 'react';
+import { Input, TextArea, Button } from '../../styles/styled';
+import { FormContainer, SuccessMessage, ErrorMessage } from './contact-form.styles';
 
 const FORMSPREE_FORM_ID = 'mdaadbqw';
 
@@ -61,24 +63,21 @@ export const ContactForm = () => {
 
   if (status === 'success') {
     return (
-      <div>
-        <h2 className="margin-bottom-15">Thank you!</h2>
-        <p className="p-default">
-          Your enquiry has been received and Greg will be in contact within 24hrs.
-        </p>
-      </div>
+      <SuccessMessage>
+        <h2>Thank you!</h2>
+        <p>Your enquiry has been received and Greg will be in contact within 24hrs.</p>
+      </SuccessMessage>
     );
   }
 
   return (
-    <form onSubmit={onSubmit}>
+    <FormContainer onSubmit={onSubmit}>
       <ul>
         <li>
-          <input
+          <Input
             type="text"
             name="name"
             placeholder="Name"
-            className="form-control"
             required
             value={form.name}
             onChange={handleInputChange}
@@ -86,11 +85,10 @@ export const ContactForm = () => {
           />
         </li>
         <li>
-          <input
+          <Input
             type="email"
             name="email"
             placeholder="Email"
-            className="form-control"
             required
             value={form.email}
             onChange={handleInputChange}
@@ -98,31 +96,24 @@ export const ContactForm = () => {
           />
         </li>
         <li>
-          <textarea
+          <TextArea
             name="message"
             placeholder="Message"
-            className="form-control"
             required
             value={form.message}
             onChange={handleInputChange}
             disabled={status === 'submitting'}
-          ></textarea>
+          />
         </li>
         <li>
-          <button
-            type="submit"
-            className="btn btn-default"
-            disabled={!isFormValid || status === 'submitting'}
-          >
+          <Button type="submit" disabled={!isFormValid || status === 'submitting'}>
             {status === 'submitting' ? 'Sending...' : 'Send'}
-          </button>
+          </Button>
           {status === 'error' && (
-            <p style={{ color: 'red', marginTop: '10px' }}>
-              Something went wrong. Please try again.
-            </p>
+            <ErrorMessage>Something went wrong. Please try again.</ErrorMessage>
           )}
         </li>
       </ul>
-    </form>
+    </FormContainer>
   );
 };

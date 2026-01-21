@@ -2,23 +2,24 @@
 
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
+import { NavList, NavItem } from './nav-menu.styles';
 
 export const NavMenu = () => {
   const pathname = usePathname();
   return (
-    <ul className="nav overflow">
-      <li className={pathname === '/' ? 'active' : ''}>
+    <NavList className="overflow">
+      <NavItem $active={pathname === '/'}>
         <Link href="/">home</Link>
-      </li>
-      <li className={pathname === '/projects' ? 'active' : ''}>
+      </NavItem>
+      <NavItem $active={pathname === '/projects'}>
         <Link href="/projects">projects</Link>
-      </li>
-      <li className={pathname === '/skills' ? 'active' : ''}>
+      </NavItem>
+      <NavItem $active={pathname === '/skills'}>
         <Link href="/skills">skills</Link>
-      </li>
-      <li className={pathname?.includes('gdcd') ? 'active' : ''}>
+      </NavItem>
+      <NavItem $active={pathname?.includes('gdcd') ?? false}>
         <Link href="/gdcd/2025">gdcd</Link>
-      </li>
-    </ul>
+      </NavItem>
+    </NavList>
   );
 };

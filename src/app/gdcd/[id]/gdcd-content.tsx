@@ -3,6 +3,9 @@
 import { Track } from '@/components/track';
 import type { YearData } from '@/types/gdcd';
 import Link from 'next/link';
+import { Row, Column, Heading2 } from '@/styles/styled';
+import { Page } from '../../page.styles';
+import { CDListing, SpotifyButton } from './gdcd.styles';
 
 interface GDCDContentProps {
   yearData: YearData;
@@ -19,63 +22,64 @@ export function GDCDContent({ yearData, allYears }: GDCDContentProps) {
   }
 
   return (
-    <div className="page cd-listing">
-      <h2 className="margin-bottom-30">GDCD</h2>
-      <p>
-        Since 2004 I've put together a compilation of (NEW) music that I have listened to throughout
-        the year. I thought it would be mildly amusing to list it all here. If you'd like to listen
-        follow the links at the bottom of each album.
-      </p>
-      <ul className="listing">
-        <li>Please select year:</li>
-        {allYears.map((y) => (
-          <li key={y} className={y === year ? 'active' : ''}>
-            <Link href={`/gdcd/${y}`}>{y}</Link>
-          </li>
-        ))}
-      </ul>
-      <div id="listing">
-        {trackPairs.map(([track1, track2], index) => (
-          <div className="row" key={index}>
-            <div className="col-md-6">
-              <Track
-                rank={track1.rank}
-                title={track1.title}
-                artist={track1.artist}
-                album={track1.album}
-                image={track1.image}
-                year={year}
-              />
-            </div>
-            {track2 && (
-              <div className="col-md-6">
+    <Page>
+      <CDListing>
+        <Heading2 className="margin-bottom-30">GDCD</Heading2>
+        <p>
+          Since 2004 I've put together a compilation of (NEW) music that I have listened to
+          throughout the year. I thought it would be mildly amusing to list it all here. If you'd
+          like to listen follow the links at the bottom of each album.
+        </p>
+        <ul className="listing">
+          <li>Please select year:</li>
+          {allYears.map((y) => (
+            <li key={y} className={y === year ? 'active' : ''}>
+              <Link href={`/gdcd/${y}`}>{y}</Link>
+            </li>
+          ))}
+        </ul>
+        <div id="listing">
+          {trackPairs.map(([track1, track2], index) => (
+            <Row key={index}>
+              <Column $span={6}>
                 <Track
-                  rank={track2.rank}
-                  title={track2.title}
-                  artist={track2.artist}
-                  album={track2.album}
-                  image={track2.image}
+                  rank={track1.rank}
+                  title={track1.title}
+                  artist={track1.artist}
+                  album={track1.album}
+                  image={track1.image}
                   year={year}
                 />
-              </div>
-            )}
-          </div>
-        ))}
+              </Column>
+              {track2 && (
+                <Column $span={6}>
+                  <Track
+                    rank={track2.rank}
+                    title={track2.title}
+                    artist={track2.artist}
+                    album={track2.album}
+                    image={track2.image}
+                    year={year}
+                  />
+                </Column>
+              )}
+            </Row>
+          ))}
 
-        {spotifyUrl && (
-          <div className="row">
-            <div className="col-md-12">
-              <a
-                href={spotifyUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="spotify"
-                title="Open in Spotify"
-              ></a>
-            </div>
-          </div>
-        )}
-      </div>
-    </div>
+          {spotifyUrl && (
+            <Row>
+              <Column $span={12}>
+                <SpotifyButton
+                  href={spotifyUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  title="Open in Spotify"
+                />
+              </Column>
+            </Row>
+          )}
+        </div>
+      </CDListing>
+    </Page>
   );
 }
