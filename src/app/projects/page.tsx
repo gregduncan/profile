@@ -11,7 +11,7 @@ export const metadata: Metadata = {
 export default function Projects() {
   return (
     <Page>
-      <Heading2 className="margin-bottom-30">Projects</Heading2>
+      <Heading2 className="mb-30">Projects</Heading2>
 
       <Row>
         <Column $span={6}>

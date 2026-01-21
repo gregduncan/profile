@@ -24,7 +24,7 @@ export function GDCDContent({ yearData, allYears }: GDCDContentProps) {
   return (
     <Page>
       <CDListing>
-        <Heading2 className="margin-bottom-30">GDCD</Heading2>
+        <Heading2 className="mb-30">GDCD</Heading2>
         <p>
           Since 2004 I've put together a compilation of (NEW) music that I have listened to
           throughout the year. I thought it would be mildly amusing to list it all here. If you'd

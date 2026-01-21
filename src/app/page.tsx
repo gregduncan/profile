@@ -23,7 +23,7 @@ export default function Home() {
   return (
     <Page>
       <RowTop>
-        <Heading2 className="margin-bottom-30" style={{ gridColumn: 'span 12', paddingLeft: '15px' }}>
+        <Heading2 className="mb-30" style={{ gridColumn: 'span 12', paddingLeft: '15px' }}>
           &nbsp;&nbsp;Latest projects
         </Heading2>
 
@@ -74,16 +74,16 @@ export default function Home() {
       <Paper>
         <RowMiddle>
           <Column $span={7}>
-            <Heading2 className="margin-bottom-15 overflow">
+            <Heading2 className="mb-15 overflow">
               GDCD{' '}
-              <ReadLink className="pull-right margin-top-10" href="#/gdcd/2013">
+              <ReadLink className="pull-right mt-10" href="#/gdcd/2013">
                 view
               </ReadLink>
             </Heading2>
             <GDCD />
           </Column>
           <Column $span={5}>
-            <Heading2 className="margin-bottom-15">Technologies</Heading2>
+            <Heading2 className="mb-15">Technologies</Heading2>
             <Tech>
               <div className="row">
                 <Column $span={3}>React</Column>
@@ -129,7 +129,7 @@ export default function Home() {
       <RowBottom>
         <Column $span={6}>
           <Heading2>About</Heading2>
-          <Heading4 className="margin-bottom-15">Web development plus stuff.</Heading4>
+          <Heading4 className="mb-15">Web development plus stuff.</Heading4>
           <Paragraph>
             Hi, my name is Greg Duncan and I'm a software developer from Portsmouth, UK. I have been
             working in application development for over 21 years, and have experience with a number
@@ -141,7 +141,7 @@ export default function Home() {
           </Paragraph>
         </Column>
         <Column $span={6}>
-          <Heading2 className="margin-bottom-15">Where's Greg?</Heading2>
+          <Heading2 className="mb-15">Where's Greg?</Heading2>
           <iframe
             width="350"
             height="200"

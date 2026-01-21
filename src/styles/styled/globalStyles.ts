@@ -70,15 +70,15 @@ export const GlobalStyles = createGlobalStyle`
     overflow: hidden;
   }
 
-  .margin-bottom-15 {
+  .mb-15 {
     margin-bottom: 15px;
   }
 
-  .margin-bottom-30 {
+  .mb-30{
     margin-bottom: 30px;
   }
 
-  .margin-top-10 {
+  .mt-10 {
     margin-top: 10px;
   }
 
