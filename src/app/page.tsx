@@ -76,7 +76,7 @@ export default function Home() {
           <Column $span={7}>
             <Heading2 className="mb-15 overflow">
               GDCD{' '}
-              <ReadLink className="pull-right mt-10" href="#/gdcd/2013">
+              <ReadLink className="mt-10" href="#/gdcd/2013">
                 view
               </ReadLink>
             </Heading2>
